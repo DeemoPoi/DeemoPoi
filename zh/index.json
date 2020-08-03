@@ -1,0 +1,50 @@
+[
+{
+	"uri": "https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/1-dos%E5%91%BD%E4%BB%A4/",
+	"title": "1 DOS命令",
+	"tags": [],
+	"description": "",
+	"content": "1 打开CMD的方式  在任意文件夹下面，按住 shift+鼠标右键，可以在此处打开powershell 在资源管理器的地址栏，前面加上 cmd+空格，可以在此地址打开cmd  2 常用DOS命令 # 基本操作 \u0026gt;D: (盘符切换) \u0026gt;dir (directory) \u0026gt;cd (change directory) \u0026gt;cd.. (返回上一级) \u0026gt;cls (clear screen) \u0026gt;md (make directory) \u0026gt;rd (remove directory) \u0026gt;cd\u0026gt;text.txt (创建文件) \u0026gt;del text.txt (删除文件) \u0026gt;ipconfig (查看电脑ip) \u0026gt;选中后回车 (复制) \u0026gt;右键 (粘贴，有些不可以用 Ctrl + V 粘贴) # 打开应用 \u0026gt;calc (calculator) \u0026gt;mspaint (画图工具) \u0026gt;notepad # ping 命令 \u0026gt;ping www.baidu.com "
+},
+{
+	"uri": "https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/2-java%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/",
+	"title": "2 Java介绍和安装",
+	"tags": [],
+	"description": "",
+	"content": "1 语言历史   机器语言\n  汇编语言\n  C语言 (贴近硬件、运行极快、效率极高 | 指针和内存管理)\n  C++ (面向对象、兼容C | 但更复杂)\n   | 有点像C | 没有指针和内存管理 | 真正可移植性，编写一次，到处运行 |\n| 面向对象 | 类型安全 | 高质量的类库 |\nJava (2006: Hadoop 大数据领域 | 2008: Android 手机端)  2 Java介绍 2.1 特性 | 简单 | 面向对象 | 可移植性，跨平台| 高性能 | 分布式 |\n| 动态性 | 多线程 | 安全性 | 健壮性 |\n2.2 三大版本 JavaSE 标准版（桌面程序，控制台开发）\nJavaME 嵌入式开发（手机，小家电）\nJavaEE 企业级开发（web端，服务器开发）\n2.3 JDK, JRE, JVM JDK Java Development Kit (包含JRE)\nJRE Java Runtime Environment (包含JVM)\nJVM Java Virtual Machine (用它实现 Write once, run anywhere. )\n 2.4 安装 JDK 安装指导\n下载地址\n可以一次性安装好 JDK、IntelliJ、Git 并帮你配置好环境\n2.5 卸载 JDK 针对上面的安装方式：\n  To uninstall everything, navigate to C:\\Program Files\\LIFT-CS and launch the uninstaller unins000.exe. To uninstall only IntelliJ, navigate to C:\\Program Files (x86)\\JetBrains\\IntelliJ IDEA Community Edition 2020.1\\bin; right click the uninstaller Uninstall.exe; and select Run as administrator.   针对一般的安装方式：\n  删除Java的安装目录 删除环境变量中的JAVA_HOME (如果有) 删除path下关于Java的目录 cmd \u0026gt;java -version 确认是否卸载   2.6 Java程序运行机制 编译型：\n一次性编译完，负责编译的东西叫编译器 (操作系统 | 比较快 | 例如 C/C++)\n解释型：\n一边解释一边运行 (网页、服务器 | 对速度要求不高 |例如 JAVA )\n Java程序运行时，先通过编译器编译成了class文件，然后进入 JVM 里面，校对后，通过解释器，一边解释一边运行。\n 2.7 注释 // 单行注释  /* 多行注释 */ /** 文档注释 * @author * @version * @since 指明需要最早使用的JDK版本 * @param 参数名 * @return * @throws */ "
+},
+{
+	"uri": "https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97/",
+	"title": "3 数据类型和运算",
+	"tags": [],
+	"description": "",
+	"content": "1 数据类型 1.1 强类型语言： (例如 Java | 速度慢些) 要求变量的使用要严格符合规定，所有变量都必须先定义后才能使用\n1.2 弱类型语言： (例如 VB, JS) 1.3 Java的数据类型分为两大类： 内置类型 (primitive type)\n// integer byte num1 = 10; // 1 byte (-128, 127) short num2 = 20; // 2 bytes (-32768, 32767) int num3 = 30; // 4 bytes (-2,147,483,648, 2,147,483,647) long num4 = 40L; // 8 bytes (-2^63, 2^63 -1)  // decimal float num = 50.1f; // 4 bytes 避免用float进行比较 double num = 3.141592653; // 8 bytes  // character char name = \u0026#34;A\u0026#34;; // one character, 2 bytes (0, 65535)  // boolean boolean flag = true; // false or true, 1 bit 引用类型 (reference type) (待完成)\n// class  // String String nameA = \u0026#34;nameA\u0026#34;; // any string, 8 bytes 2 数据类型的转换 /* 低 byte,short,char -\u0026gt; int -\u0026gt; long -\u0026gt; float -\u0026gt; double 高 */ /** 注意点： * 1. 不能对布尔值进行转换 * 2. 不能把对象类型转换为不相干的类型 * 3. 在把高容量转换到低容量的时候，强制转换 * 4. 转换的时候可能存在内存溢出，或者精度问题 */ int i = 127; double = i; //自动转换 低-\u0026gt;高 byte = (byte)i; //强制转换 高-\u0026gt;低  int money = 1_000_000_000; // JDK7的新特性，数字可以用下划线分割 int years = 20; int total = money * years; // 溢出 long total2 = money * years; // 还是溢出，因为转换之前已经溢出了 long total3 = money * ((long)years); // 不溢出  long a = 123123123123123L; int b = 123; short c = 10; byte d = 8; System.out.println(a + b + c + d); // long System.out.println(b + c +d); // int System.out.println(c + d); // int 如果不是比int高，那么默认是int  char c = \u0026#39;a\u0026#39;; int n = c + 1; // 自动转换，低-\u0026gt;高，得到\u0026#39;a\u0026#39;对应的数字 + 1 char c2 = (char)n ; // 强制转换，高-\u0026gt;低，得到字母\u0026#39;b\u0026#39; 3 运算符 // ++ -- 自增 自减 int a = 3; int b = a++; // a先赋值给b，再自增1 int c = ++a; // a先自增1，再赋值给c System.out.println(a); // 5 System.out.println(b); // 3 System.out.println(c); // 5  // 短路运算 int c = 5; boolean d = (c \u0026lt; 4) \u0026amp;\u0026amp; (c++ \u0026lt; 4); // \u0026amp;\u0026amp; 左边是false，右边根本不会执行 System.out.println(d); // false System.out.println(c); // 5  // 位运算 \u0026amp; | ^ ~ \u0026gt;\u0026gt; \u0026lt;\u0026lt; (涉及到计算机组成原理) /* A = 0011 1100 B = 0000 1101 A\u0026amp;B = 0000 1100 类似and，都是1，才取1 A|B = 0011 1101 类似or,存在1，就取1 A^B = 0011 0001 异或，不同才取1 ~B = 1111 0010 取反 ########################### \u0026lt;\u0026lt; 左移 *2 \u0026gt;\u0026gt; 右移 /2 0000 0000 0 0000 0001 1 0000 0010 2 0000 0100 4 0000 1000 8 0001 0000 16 */ System.out.println(2\u0026lt;\u0026lt;3); //16 2在二进制下，将1向左移动3位，变成16  // 字符串连接符 int a = 10; int b = 20; System.out.println(\u0026#34;\u0026#34; + a + b); // 1020 只连接 System.out.println(a + b + \u0026#34;\u0026#34;); // 30 先运算再连接  // 条件运算符 // x ? y : z // 如果 x == true，则结果为y，否则结果为z int score = 50; String result = score \u0026lt; 60 ? \u0026#34;不及格\u0026#34; : \u0026#34;及格\u0026#34;; System.out.println(result); // 及格  4 变量 public class Demo { // 类变量 static 不用new对象也可以直接使用  static double salary = 2500; // 实例变量 instance variable  String name; int age; // 常量 constant，初始化(initailize)之后不能再改变的值  final double pi = 3.1415; public static void main(String[] args) { // 局部变量  int i = 0; // 类变量的用法  System.out.println(salary); // 实例变量的用法  // 变量类型 变量名 = new Demo();  Demo de = new Demo(); System.out.println(de.age); System.out.println(de.name); } } "
+},
+{
+	"uri": "https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/",
+	"title": "B01 Java入门",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://deemopoi.github.io/zh/",
+	"title": "",
+	"tags": [],
+	"description": "",
+	"content": "DeemoPoi\u0026rsquo;s Notes "
+},
+{
+	"uri": "https://deemopoi.github.io/zh/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "https://deemopoi.github.io/zh/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

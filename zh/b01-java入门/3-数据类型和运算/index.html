@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh" class="js csstransforms3d">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="Hugo 0.74.3" />
+    <meta name="description" content="Documentation for Hugo Learn Theme">
+<meta name="author" content="Mathieu Cornic">
+
+    <link rel="icon" href="/images/favicon.png" type="image/png">
+
+    <title>3 数据类型和运算 :: Hugo 主题的 Learn 文档</title>
+
+    
+    <link href="/css/nucleus.css?1596474426" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596474426" rel="stylesheet">
+    <link href="/css/hybrid.css?1596474426" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596474426" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596474426" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596474426" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596474426" rel="stylesheet">
+    <link href="/css/theme.css?1596474426" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596474426" rel="stylesheet">
+    
+    
+
+    <script src="/js/jquery-3.3.1.min.js?1596474426"></script>
+
+    <style>
+      :root #header + #content > #left > #rlblock_left{
+          display:none !important;
+      }
+      
+    </style>
+    
+  </head>
+  <body class="" data-url="/zh/b01-java%E5%85%A5%E9%97%A8/3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97/">
+    <nav id="sidebar" class="showVisitedLinks">
+
+
+
+  <div id="header-wrapper">
+    <div id="header">
+      <a id="logo" href="https://deemopoi.github.io/">
+  <svg id="grav-logo" style="width:100%; height:100%;" viewBox="0 0 504 140" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:1.41421;">
+    <path d="M235.832,71.564l-7.98,-0.001c-1.213,0.001 -2.197,0.987 -2.197,2.204l0,15.327l-0.158,0.132c-4.696,3.962 -10.634,6.14 -16.719,6.14c-14.356,0 -26.034,-11.68 -26.034,-26.037c0,-14.358 11.678,-26.035 26.034,-26.035c5.582,0 10.919,1.767 15.437,5.113c0.877,0.649 2.093,0.56 2.866,-0.211l5.69,-5.69c0.444,-0.442 0.675,-1.055 0.639,-1.681c-0.034,-0.627 -0.336,-1.206 -0.828,-1.597c-6.76,-5.363 -15.214,-8.314 -23.805,-8.314c-21.18,0 -38.414,17.233 -38.414,38.415c0,21.183 17.234,38.415 38.414,38.415c10.937,0 21.397,-4.705 28.698,-12.914c0.358,-0.403 0.556,-0.921 0.556,-1.46l0,-19.603c0,-1.217 -0.985,-2.203 -2.2,-2.203"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M502.794,34.445c-0.408,-0.616 -1.1,-0.989 -1.838,-0.989l-8.684,0c-0.879,0 -1.673,0.522 -2.022,1.329l-24.483,56.839l-24.92,-56.852c-0.352,-0.799 -1.142,-1.316 -2.012,-1.316l-8.713,0c-0.744,0 -1.44,0.373 -1.843,0.995c-0.408,0.623 -0.476,1.408 -0.174,2.09l30.186,68.858c0.352,0.799 1.143,1.317 2.017,1.317l10.992,0c0.879,0 1.673,-0.527 2.021,-1.329l29.655,-68.861c0.289,-0.68 0.222,-1.461 -0.182,-2.081"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M388.683,34.772c-0.353,-0.798 -1.142,-1.316 -2.017,-1.316l-10.988,0c-0.879,0 -1.673,0.522 -2.021,1.329l-29.655,68.861c-0.294,0.675 -0.226,1.46 0.182,2.077c0.407,0.619 1.096,0.993 1.838,0.993l8.684,0c0.879,0 1.673,-0.526 2.022,-1.329l24.478,-56.842l24.92,56.854c0.353,0.798 1.143,1.317 2.013,1.317l8.717,0c0.744,0 1.44,-0.374 1.843,-0.993c0.408,-0.624 0.471,-1.41 0.174,-2.094l-30.19,-68.857Z"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M309.196,81.525l0.476,-0.229c8.675,-4.191 14.279,-13.087 14.279,-22.667c0,-13.881 -11.295,-25.174 -25.176,-25.174l-31.863,0c-1.214,0 -2.199,0.988 -2.199,2.202l0,68.855c0,1.219 0.985,2.204 2.199,2.204l7.979,0c1.214,0 2.2,-0.985 2.2,-2.204l0,-58.679l21.684,0c7.059,0 12.799,5.739 12.799,12.796c0,5.885 -3.996,10.989 -9.728,12.408c-1.032,0.261 -2.064,0.393 -3.071,0.393l-7.977,0c-0.829,0 -1.585,0.467 -1.959,1.205c-0.378,0.74 -0.305,1.625 0.187,2.296l22.62,30.884c0.412,0.566 1.07,0.901 1.771,0.901l9.915,0c0.827,0 1.587,-0.467 1.96,-1.207c0.378,-0.742 0.302,-1.629 -0.186,-2.296l-15.91,-21.688Z"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M107.191,80.969c-7.255,-4.794 -11.4,-8.845 -15.011,-16.109c-2.47,4.977 -8.236,12.376 -17.962,18.198c-4.856,15.106 -27.954,44.015 -35.43,39.916c-2.213,-1.212 -2.633,-2.808 -2.133,-4.456c0.536,-4.129 9.078,-13.62 9.078,-13.62c0,0 0.18,1.992 2.913,6.187c-3.609,-11.205 5.965,-25.031 8.5,-29.738c3.985,-1.269 4.274,-6.387 4.274,-6.387c0.255,-7.909 -3.278,-13.635 -6.701,-17.059c2.459,3.002 3.255,7.539 3.372,11.694l0,0.023c0.012,0.469 0.012,0.93 0.011,1.39c-0.117,3.439 -1.157,8.19 -3.383,8.19l0.006,0.03c-2.289,-0.098 -5.115,0.391 -7.639,1.18l-5.582,1.334c0,0 2.977,-0.136 4.584,1.252c-1.79,2.915 -5.769,6.533 -10.206,8.588c-6.457,2.995 -8.312,-2.964 -5.034,-6.838c0.805,-0.946 1.618,-1.745 2.387,-2.399c-0.495,-0.513 -0.807,-1.198 -0.889,-2.068c-0.001,-0.005 -0.004,-0.009 -0.005,-0.013c-0.45,-1.977 -0.202,-4.543 2.596,-8.623c0.551,-0.863 1.214,-1.748 2.007,-2.647c0.025,-0.031 0.046,-0.059 0.072,-0.089c0.034,-0.042 0.072,-0.08 0.108,-0.121c0.02,-0.023 0.039,-0.045 0.059,-0.068c0.2,-0.228 0.413,-0.45 0.639,-0.663c3.334,-3.414 8.599,-6.966 16.897,-10.152c9.675,-14.223 13.219,-16.89 13.219,-16.89c1.071,-1.096 2.943,-2.458 3.632,-2.805c-5.053,-8.781 -6.074,-21.158 -4.75,-24.493c-0.107,0.18 -0.206,0.365 -0.287,0.556c0.49,-1.143 0.819,-1.509 1.328,-2.111c1.381,-1.632 6.058,-2.488 7.737,0.971c0.895,1.844 1.063,4.232 1.034,6.023c-3.704,-0.193 -7.063,4.036 -7.063,4.036c0,0 3.067,-1.448 6.879,-1.473c0,0 1.015,0.883 2.283,2.542c-1.712,3.213 -4.524,10.021 -2.488,17.168c0.338,1.408 0.849,2.619 1.483,3.648c0.024,0.045 0.044,0.089 0.069,0.135c0.051,0.066 0.096,0.122 0.144,0.183c3.368,5.072 9.542,5.665 9.542,5.665c-2.906,-1.45 -5.274,-3.76 -6.816,-6.56c-0.8,-1.498 -1.291,-2.762 -1.592,-3.761c-1.636,-6.313 0.771,-9.999 2.149,-12.471c3.17,-4.917 8.944,-7.893 15.151,-7.185c8.712,0.995 14.968,8.862 13.973,17.571c-0.608,5.321 -3.781,9.723 -8.142,12.117c1.049,2.839 -0.073,6.28 -0.073,6.28c2.642,3.323 2.758,5.238 2.667,7.017c-3.357,-0.565 -6.618,1.701 -6.618,1.701c0,0 6.476,-1.546 10.238,1.81c2.446,2.631 4.078,5.009 5.051,6.766c1.393,2.505 7.859,2.683 7.123,7.188c-0.737,4.499 -5.669,4.542 -13.401,-0.56M69.571,0c-38.424,0 -69.571,31.148 -69.571,69.567c0,38.422 31.147,69.573 69.571,69.573c38.42,0 69.568,-31.151 69.568,-69.573c0,-38.42 -31.148,-69.567 -69.568,-69.567"
+      style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M73.796,51.693c0.813,-0.814 0.813,-2.134 0,-2.947c-0.815,-0.814 -2.133,-0.814 -2.947,0c-0.815,0.813 -0.815,2.133 0,2.947c0.814,0.813 2.132,0.813 2.947,0" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M66.445,53.149c-0.814,0.813 -0.814,2.133 0,2.947c0.813,0.814 2.133,0.814 2.947,0c0.813,-0.814 0.813,-2.134 0,-2.947c-0.814,-0.813 -2.134,-0.813 -2.947,0" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M79.231,54.233c-1.274,-1.274 -3.339,-1.272 -4.611,0l-2.713,2.712c-1.274,1.275 -1.274,3.339 0,4.612l2.978,2.978c1.274,1.275 3.338,1.274 4.611,0l2.712,-2.712c1.274,-1.274 1.274,-3.339 0,-4.612l-2.977,-2.978Z" style="fill:#000;fill-rule:nonzero;"></path>
+    <path d="M95.759,41.445c-2.151,-2.578 1.869,-7.257 4.391,-4.463c4.645,5.148 -2.237,7.041 -4.391,4.463M105.004,44.132c3.442,-6.553 -1.427,-10.381 -4.773,-13.523c-5.36,-5.039 -10.706,-7.217 -16.811,-0.241c-6.102,6.977 -2.226,15.068 3.356,19.061c5.584,3.994 14.782,1.255 18.228,-5.297"
+      style="fill:#000;fill-rule:nonzero;"></path>
+  </svg>
+</a>
+
+    </div>
+    
+        <div class="searchbox">
+    <label for="search-by"><i class="fas fa-search"></i></label>
+    <input data-search-input id="search-by" type="search" placeholder="">
+    <span data-search-clear=""><i class="fas fa-times"></i></span>
+</div>
+
+<script type="text/javascript" src="/js/lunr.min.js?1596474426"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1596474426"></script>
+<script type="text/javascript">
+    
+        var baseurl = "https:\/\/deemopoi.github.io\/\/zh";
+    
+</script>
+<script type="text/javascript" src="/js/search.js?1596474426"></script>
+
+    
+  </div>
+
+    <div class="highlightable">
+    <ul class="topics">
+
+        
+          
+          
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/" title="B01 Java入门" class="dd-item 
+        parent
+        
+        
+        ">
+      <a href="/zh/b01-java%E5%85%A5%E9%97%A8/">
+          B01 Java入门
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+      
+        <ul>
+          
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/1-dos%E5%91%BD%E4%BB%A4/" title="1 DOS命令" class="dd-item ">
+        <a href="/zh/b01-java%E5%85%A5%E9%97%A8/1-dos%E5%91%BD%E4%BB%A4/">
+        1 DOS命令
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/2-java%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/" title="2 Java介绍和安装" class="dd-item ">
+        <a href="/zh/b01-java%E5%85%A5%E9%97%A8/2-java%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/">
+        2 Java介绍和安装
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+      <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97/" title="3 数据类型和运算" class="dd-item active">
+        <a href="/zh/b01-java%E5%85%A5%E9%97%A8/3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97/">
+        3 数据类型和运算
+        <i class="fas fa-check read-icon"></i>
+        </a>
+    </li>
+     
+  
+ 
+
+            
+          
+        
+        </ul>
+              
+    </li>
+  
+ 
+
+          
+         
+    </ul>
+
+    
+    
+      <section id="shortcuts">
+        <h3></h3>
+        <ul>
+          
+              <li> 
+                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> GitHub 仓库</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://deemopoi.github.io/zh/showcase"><i class='fas fa-fw fa-camera'></i> 展示区</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://gohugo.io/"><i class='fas fa-fw fa-bookmark'></i> Hugo 文档</a>
+              </li>
+          
+              <li> 
+                  <a class="padding" href="https://deemopoi.github.io/zh/credits"><i class='fas fa-fw fa-bullhorn'></i> 鸣谢</a>
+              </li>
+          
+        </ul>
+      </section>
+    
+
+    
+    <section id="prefooter">
+      <hr/>
+      <ul>
+      
+        <li>
+          <a class="padding">
+            <i class="fas fa-language fa-fw"></i>
+          <div class="select-style">
+            <select id="select-language" onchange="location = this.value;">
+          
+          
+          
+              
+              
+                  
+              
+                  
+              
+                  
+                    
+                    
+                      <option id="zh" value="https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97/" selected>简体中文</option>
+                    
+                  
+              
+          
+        </select>
+        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+          width="255px" height="255px" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255;" xml:space="preserve">
+          <g>
+            <g id="arrow-drop-down">
+              <polygon points="0,63.75 127.5,191.25 255,63.75 		" />
+            </g>
+          </g>
+        </svg>
+        </div>
+        </a>
+        </li>
+      
+      
+      
+        <li><a class="padding" href="#" data-clear-history-toggle=""><i class="fas fa-history fa-fw"></i> </a></li>
+      
+      </ul>
+    </section>
+    
+    <section id="footer">
+      <p>Built with <a href="https://github.com/matcornic/hugo-theme-learn"><i class="fas fa-heart"></i></a> from <a href="https://getgrav.org">Grav</a> and <a href="https://gohugo.io/">Hugo</a></p>
+
+    </section>
+  </div>
+</nav>
+
+
+
+
+        <section id="body">
+        <div id="overlay"></div>
+        <div class="padding highlightable">
+              
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/B01%20Java%e5%85%a5%e9%97%a8/3%20%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b%e5%92%8c%e8%bf%90%e7%ae%97.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/zh/'></a> > <a href='/zh/b01-java%E5%85%A5%E9%97%A8/'>B01 Java入门</a> > 3 数据类型和运算
+          
+        
+          
+        
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-数据类型">1 数据类型</a></li>
+        <li><a href="#2-数据类型的转换">2 数据类型的转换</a></li>
+        <li><a href="#3-运算符">3 运算符</a></li>
+        <li><a href="#4-变量">4 变量</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
+        <div id="head-tags">
+        
+        </div>
+        
+        <div id="body-inner">
+          
+            <h1>
+              
+              3 数据类型和运算
+            </h1>
+          
+
+        
+
+
+<h3 id="1-数据类型">1 数据类型</h3>
+<h4 id="11-强类型语言--------例如-java--速度慢些">1.1 强类型语言：        (例如 Java | 速度慢些)</h4>
+<p>要求变量的使用要严格符合规定，所有变量都必须先定义后才能使用</p>
+<h4 id="12-弱类型语言---------例如-vb-js">1.2 弱类型语言：         (例如 VB, JS)</h4>
+<h4 id="13-java的数据类型分为两大类">1.3 Java的数据类型分为两大类：</h4>
+<p>内置类型 (primitive type)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// integer
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">byte</span> num1 <span style="color:#f92672">=</span> 10<span style="color:#f92672">;</span> <span style="color:#75715e">// 1 byte  (-128, 127)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">short</span> num2 <span style="color:#f92672">=</span> 20<span style="color:#f92672">;</span> <span style="color:#75715e">// 2 bytes  (-32768, 32767)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> num3 <span style="color:#f92672">=</span> 30<span style="color:#f92672">;</span> <span style="color:#75715e">// 4 bytes  (-2,147,483,648, 2,147,483,647)
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> num4 <span style="color:#f92672">=</span> 40L<span style="color:#f92672">;</span> <span style="color:#75715e">// 8 bytes  (-2^63, 2^63 -1)
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// decimal
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">float</span> num <span style="color:#f92672">=</span> 50<span style="color:#f92672">.</span><span style="color:#a6e22e">1f</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 4 bytes  避免用float进行比较
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">double</span> num <span style="color:#f92672">=</span> 3<span style="color:#f92672">.</span><span style="color:#a6e22e">141592653</span><span style="color:#f92672">;</span> <span style="color:#75715e">// 8 bytes
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// character
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> name <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;A&#34;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// one character, 2 bytes  (0, 65535)
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// boolean
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">boolean</span> flag <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span><span style="color:#f92672">;</span> <span style="color:#75715e">// false or true, 1 bit
+</span></code></pre></div><p>引用类型 (reference type) (待完成)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// class
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">// String
+</span><span style="color:#75715e"></span>String nameA <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;nameA&#34;</span><span style="color:#f92672">;</span> <span style="color:#75715e">// any string, 8 bytes
+</span></code></pre></div><h3 id="2-数据类型的转换">2 数据类型的转换</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">/* 低 byte,short,char -&gt; int -&gt; long -&gt; float -&gt; double 高 */</span>
+
+<span style="color:#75715e">/** 注意点：
+</span><span style="color:#75715e">* 1. 不能对布尔值进行转换
+</span><span style="color:#75715e">* 2. 不能把对象类型转换为不相干的类型
+</span><span style="color:#75715e">* 3. 在把高容量转换到低容量的时候，强制转换
+</span><span style="color:#75715e">* 4. 转换的时候可能存在内存溢出，或者精度问题
+</span><span style="color:#75715e">*/</span>
+
+<span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 127<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">double</span> <span style="color:#f92672">=</span> i<span style="color:#f92672">;</span>  <span style="color:#75715e">//自动转换    低-&gt;高
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">byte</span> <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">byte</span><span style="color:#f92672">)</span>i<span style="color:#f92672">;</span>  <span style="color:#75715e">//强制转换    高-&gt;低
+</span><span style="color:#75715e"></span>
+
+<span style="color:#66d9ef">int</span> money <span style="color:#f92672">=</span> 1_000_000_000<span style="color:#f92672">;</span>  <span style="color:#75715e">//  JDK7的新特性，数字可以用下划线分割
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> years <span style="color:#f92672">=</span> 20<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> total <span style="color:#f92672">=</span> money <span style="color:#f92672">*</span> years<span style="color:#f92672">;</span>  <span style="color:#75715e">// 溢出
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> total2 <span style="color:#f92672">=</span> money <span style="color:#f92672">*</span> years<span style="color:#f92672">;</span>  <span style="color:#75715e">// 还是溢出，因为转换之前已经溢出了
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">long</span> total3 <span style="color:#f92672">=</span> money <span style="color:#f92672">*</span> <span style="color:#f92672">((</span><span style="color:#66d9ef">long</span><span style="color:#f92672">)</span>years<span style="color:#f92672">);</span>  <span style="color:#75715e">// 不溢出
+</span><span style="color:#75715e"></span>
+
+<span style="color:#66d9ef">long</span> a <span style="color:#f92672">=</span> 123123123123123L<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> 123<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">short</span> c <span style="color:#f92672">=</span> 10<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">byte</span> d <span style="color:#f92672">=</span> 8<span style="color:#f92672">;</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>a <span style="color:#f92672">+</span> b <span style="color:#f92672">+</span> c <span style="color:#f92672">+</span> d<span style="color:#f92672">);</span> <span style="color:#75715e">// long
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>b <span style="color:#f92672">+</span> c <span style="color:#f92672">+</span>d<span style="color:#f92672">);</span> <span style="color:#75715e">// int
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>c <span style="color:#f92672">+</span> d<span style="color:#f92672">);</span> <span style="color:#75715e">// int    如果不是比int高，那么默认是int
+</span><span style="color:#75715e"></span>
+
+<span style="color:#66d9ef">char</span> c <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;a&#39;</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> n <span style="color:#f92672">=</span> c <span style="color:#f92672">+</span> 1<span style="color:#f92672">;</span>  <span style="color:#75715e">// 自动转换，低-&gt;高，得到&#39;a&#39;对应的数字 + 1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">char</span> c2 <span style="color:#f92672">=</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">char</span><span style="color:#f92672">)</span>n <span style="color:#f92672">;</span> <span style="color:#75715e">// 强制转换，高-&gt;低，得到字母&#39;b&#39;
+</span></code></pre></div><h3 id="3-运算符">3 运算符</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// ++ --  自增 自减
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 3<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> a<span style="color:#f92672">++;</span> <span style="color:#75715e">// a先赋值给b，再自增1
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> <span style="color:#f92672">++</span>a<span style="color:#f92672">;</span> <span style="color:#75715e">// a先自增1，再赋值给c
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span> <span style="color:#75715e">// 5
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>b<span style="color:#f92672">);</span> <span style="color:#75715e">// 3 
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>c<span style="color:#f92672">);</span> <span style="color:#75715e">// 5
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">// 短路运算
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> c <span style="color:#f92672">=</span> 5<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">boolean</span> d <span style="color:#f92672">=</span> <span style="color:#f92672">(</span>c <span style="color:#f92672">&lt;</span> 4<span style="color:#f92672">)</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#f92672">(</span>c<span style="color:#f92672">++</span> <span style="color:#f92672">&lt;</span> 4<span style="color:#f92672">);</span> <span style="color:#75715e">// &amp;&amp; 左边是false，右边根本不会执行
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>d<span style="color:#f92672">);</span> <span style="color:#75715e">// false
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>c<span style="color:#f92672">);</span> <span style="color:#75715e">// 5
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">// 位运算 &amp; | ^ ~ &gt;&gt; &lt;&lt;  (涉及到计算机组成原理)
+</span><span style="color:#75715e"></span><span style="color:#75715e">/*
+</span><span style="color:#75715e">A = 0011 1100
+</span><span style="color:#75715e">B = 0000 1101
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">A&amp;B = 0000 1100     类似and，都是1，才取1
+</span><span style="color:#75715e">A|B = 0011 1101     类似or,存在1，就取1
+</span><span style="color:#75715e">A^B = 0011 0001     异或，不同才取1
+</span><span style="color:#75715e">~B = 1111 0010      取反
+</span><span style="color:#75715e">###########################
+</span><span style="color:#75715e">
+</span><span style="color:#75715e">&lt;&lt;   左移 *2
+</span><span style="color:#75715e">&gt;&gt;   右移 /2
+</span><span style="color:#75715e">0000 0000    0
+</span><span style="color:#75715e">0000 0001    1
+</span><span style="color:#75715e">0000 0010    2
+</span><span style="color:#75715e">0000 0100    4
+</span><span style="color:#75715e">0000 1000    8
+</span><span style="color:#75715e">0001 0000    16
+</span><span style="color:#75715e">*/</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>2<span style="color:#f92672">&lt;&lt;</span>3<span style="color:#f92672">);</span> <span style="color:#75715e">//16   2在二进制下，将1向左移动3位，变成16
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">// 字符串连接符
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 10<span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> b <span style="color:#f92672">=</span> 20<span style="color:#f92672">;</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;&#34;</span> <span style="color:#f92672">+</span> a <span style="color:#f92672">+</span> b<span style="color:#f92672">);</span> <span style="color:#75715e">// 1020 只连接
+</span><span style="color:#75715e"></span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>a <span style="color:#f92672">+</span> b <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34;&#34;</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 30 先运算再连接
+</span><span style="color:#75715e"></span>
+
+<span style="color:#75715e">// 条件运算符
+</span><span style="color:#75715e">// x ? y : z
+</span><span style="color:#75715e">// 如果 x == true，则结果为y，否则结果为z
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> score <span style="color:#f92672">=</span> 50<span style="color:#f92672">;</span>
+String result <span style="color:#f92672">=</span> score <span style="color:#f92672">&lt;</span> 60 <span style="color:#f92672">?</span> <span style="color:#e6db74">&#34;不及格&#34;</span> <span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;及格&#34;</span><span style="color:#f92672">;</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>result<span style="color:#f92672">);</span> <span style="color:#75715e">// 及格
+</span><span style="color:#75715e"></span>
+</code></pre></div><h3 id="4-变量">4 变量</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Demo</span> <span style="color:#f92672">{</span>
+    <span style="color:#75715e">// 类变量 static 不用new对象也可以直接使用
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">double</span> salary <span style="color:#f92672">=</span> 2500<span style="color:#f92672">;</span>
+    
+    <span style="color:#75715e">// 实例变量 instance variable
+</span><span style="color:#75715e"></span>    String name<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
+    
+    <span style="color:#75715e">// 常量 constant，初始化(initailize)之后不能再改变的值
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">final</span> <span style="color:#66d9ef">double</span> pi <span style="color:#f92672">=</span> 3<span style="color:#f92672">.</span><span style="color:#a6e22e">1415</span><span style="color:#f92672">;</span>
+    
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 局部变量
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">;</span>
+        
+        <span style="color:#75715e">// 类变量的用法
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>salary<span style="color:#f92672">);</span>
+        
+        <span style="color:#75715e">// 实例变量的用法
+</span><span style="color:#75715e"></span>        <span style="color:#75715e">// 变量类型 变量名 = new Demo();
+</span><span style="color:#75715e"></span>        Demo de <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Demo<span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>de<span style="color:#f92672">.</span><span style="color:#a6e22e">age</span><span style="color:#f92672">);</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>de<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
+
+<footer class="footline">
+	
+</footer>
+
+        
+        </div> 
+        
+
+      </div>
+
+    <div id="navigation">
+        
+        
+        
+        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                        
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                        
+                        
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+            
+        
+        
+        
+
+
+	 
+	 
+		
+			<a class="nav nav-prev" href="/zh/b01-java%E5%85%A5%E9%97%A8/2-java%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/" title="2 Java介绍和安装"> <i class="fa fa-chevron-left"></i></a>
+		
+		
+			<a class="nav nav-next" href="/zh/b01-java%E5%85%A5%E9%97%A8/1-dos%E5%91%BD%E4%BB%A4/" title="1 DOS命令" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+	
+    </div>
+
+    </section>
+    
+    <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
+      <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
+    </div>
+    <script src="/js/clipboard.min.js?1596474426"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596474426"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596474426"></script>
+    <script src="/js/jquery.sticky.js?1596474426"></script>
+    <script src="/js/featherlight.min.js?1596474426"></script>
+    <script src="/js/highlight.pack.js?1596474426"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596474426"></script>
+    <script src="/js/learn.js?1596474426"></script>
+    <script src="/js/hugo-learn.js?1596474426"></script>
+
+    <link href="/mermaid/mermaid.css?1596474426" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596474426"></script>
+    <script>
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    
+
+  </body>
+</html>
+

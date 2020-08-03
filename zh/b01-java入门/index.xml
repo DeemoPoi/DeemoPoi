@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>B01 Java入门 on Hugo 主题的 Learn 文档</title>
+    <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/</link>
+    <description>Recent content in B01 Java入门 on Hugo 主题的 Learn 文档</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Mon, 03 Aug 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>1 DOS命令</title>
+      <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/1-dos%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/1-dos%E5%91%BD%E4%BB%A4/</guid>
+      <description>1 打开CMD的方式  在任意文件夹下面，按住 shift+鼠标右键，可以在此处打开powershell 在资源管理器的地址栏，前面加上 cmd+空格，可以在此地址打开cmd  2 常用DOS命令 # 基本操作 &amp;gt;D: (盘符切换) &amp;gt;dir (directory) &amp;gt;cd (change directory) &amp;gt;cd.. (返回上一级) &amp;gt;cls (clear screen) &amp;gt;md (make directory) &amp;gt;rd (remove directory) &amp;gt;cd&amp;gt;text.txt (创建文件) &amp;gt;del text.txt (删除文件) &amp;gt;ipconfig (查看电脑ip) &amp;gt;选中后回车 (复制) &amp;gt;右键 (粘贴，有些不可以用 Ctrl + V 粘贴) # 打开应用 &amp;gt;calc (calculator) &amp;gt;mspaint (画图工具) &amp;gt;notepad # ping 命令 &amp;gt;ping www.baidu.com </description>
+    </item>
+    
+    <item>
+      <title>2 Java介绍和安装</title>
+      <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/2-java%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/2-java%E4%BB%8B%E7%BB%8D%E5%92%8C%E5%AE%89%E8%A3%85/</guid>
+      <description>1 语言历史   机器语言
+  汇编语言
+  C语言 (贴近硬件、运行极快、效率极高 | 指针和内存管理)
+  C++ (面向对象、兼容C | 但更复杂)
+   | 有点像C | 没有指针和内存管理 | 真正可移植性，编写一次，到处运行 |
+| 面向对象 | 类型安全 | 高质量的类库 |
+Java (2006: Hadoop 大数据领域 | 2008: Android 手机端)  2 Java介绍 2.1 特性 | 简单 | 面向对象 | 可移植性，跨平台| 高性能 | 分布式 |
+| 动态性 | 多线程 | 安全性 | 健壮性 |
+2.2 三大版本 JavaSE 标准版（桌面程序，控制台开发）</description>
+    </item>
+    
+    <item>
+      <title>3 数据类型和运算</title>
+      <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97/</guid>
+      <description>1 数据类型 1.1 强类型语言： (例如 Java | 速度慢些) 要求变量的使用要严格符合规定，所有变量都必须先定义后才能使用
+1.2 弱类型语言： (例如 VB, JS) 1.3 Java的数据类型分为两大类： 内置类型 (primitive type)
+// integer byte num1 = 10; // 1 byte (-128, 127) short num2 = 20; // 2 bytes (-32768, 32767) int num3 = 30; // 4 bytes (-2,147,483,648, 2,147,483,647) long num4 = 40L; // 8 bytes (-2^63, 2^63 -1)  // decimal float num = 50.1f; // 4 bytes 避免用float进行比较 double num = 3.</description>
+    </item>
+    
+  </channel>
+</rss>
