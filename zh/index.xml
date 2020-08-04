@@ -6,10 +6,19 @@
     <description>Recent content on Hugo 主题的 Learn 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Mon, 03 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 04 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://deemopoi.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>4 语法查漏补缺</title>
+      <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/4-%E8%AF%AD%E6%B3%95%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</link>
+      <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/4-%E8%AF%AD%E6%B3%95%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/</guid>
+      <description>1 用户交互 Scanner // next() 会跳过空格，并把空格作为分隔符，所以输出不会带有空格 // nextline() 会读取整行，遇到enter时停止读取，所以输出可以带空格 // hasNext() 与 hasNextline() 等待输入数据，返回boolean  import java.util.Scanner; public class Demo { public static void main(String[] args) { // 创建一个扫描器对象，用于接收键盘数据  Scanner scanner = new Scanner(System.in); System.out.println(&amp;#34;请输入数据：&amp;#34;); // 程序会在此处暂停，直到用户输入  String str = scanner.next(); System.out.println(&amp;#34;输出的内容为：&amp;#34; + str); // 凡是属于IO流的类，如果不关闭会一直占用资源  scanner.close(); } } 2 多选择结构 switch char grade = &amp;#39;C&amp;#39;; //switch 匹配一个具体的值，每个case都需要break，否则会继续执行 //JDK7 以后，支持匹配字符串 String 了 switch (grade) { case &amp;#39;A&amp;#39;: System.</description>
+    </item>
     
     <item>
       <title>1 DOS命令</title>

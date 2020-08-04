@@ -1,5 +1,12 @@
 [
 {
+	"uri": "https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/4-%E8%AF%AD%E6%B3%95%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/",
+	"title": "4 语法查漏补缺",
+	"tags": [],
+	"description": "",
+	"content": "1 用户交互 Scanner // next() 会跳过空格，并把空格作为分隔符，所以输出不会带有空格 // nextline() 会读取整行，遇到enter时停止读取，所以输出可以带空格 // hasNext() 与 hasNextline() 等待输入数据，返回boolean  import java.util.Scanner; public class Demo { public static void main(String[] args) { // 创建一个扫描器对象，用于接收键盘数据  Scanner scanner = new Scanner(System.in); System.out.println(\u0026#34;请输入数据：\u0026#34;); // 程序会在此处暂停，直到用户输入  String str = scanner.next(); System.out.println(\u0026#34;输出的内容为：\u0026#34; + str); // 凡是属于IO流的类，如果不关闭会一直占用资源  scanner.close(); } } 2 多选择结构 switch char grade = \u0026#39;C\u0026#39;; //switch 匹配一个具体的值，每个case都需要break，否则会继续执行 //JDK7 以后，支持匹配字符串 String 了 switch (grade) { case \u0026#39;A\u0026#39;: System.out.println(\u0026#34;优秀\u0026#34;); break; case \u0026#39;B\u0026#39;: System.out.println(\u0026#34;良好\u0026#34;); break; case \u0026#39;C\u0026#39;: System.out.println(\u0026#34;及格\u0026#34;); break; case \u0026#39;F\u0026#39;: System.out.println(\u0026#34;挂科\u0026#34;); break; default: System.out.println(\u0026#34;未知等级\u0026#34;); } 3 语法查漏 // 判断字符串是否相等不能用 == ，而用 .equals() String s = \u0026#34;Hello\u0026#34;; if (s.equals(\u0026#34;Hello\u0026#34;)) { } // do while 先执行后判断，至少执行一次 do { sum += i; i++; }while (i \u0026lt;= 100); // 遍历数组内的元素 int[] numbers = {10,20,30,40,50}; for (int i : numbers) { System.out.println(i); } // 反转数组内元素 int len = numbers.length; int [] reuslt = new int[len]; for (int i = 0, j = len-1; i \u0026lt; len; i++, j--) { result[j] = numbers[i]; } System.out.println(result); // break 强制退出loop // continue 中断本次loop，执行下次loop "
+},
+{
 	"uri": "https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/1-dos%E5%91%BD%E4%BB%A4/",
 	"title": "1 DOS命令",
 	"tags": [],

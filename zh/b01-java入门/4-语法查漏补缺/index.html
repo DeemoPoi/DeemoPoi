@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>B01 Java入门 :: Hugo 主题的 Learn 文档</title>
+    <title>4 语法查漏补缺 :: Hugo 主题的 Learn 文档</title>
 
     
     <link href="/css/nucleus.css?1596562812" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/zh/b01-java%E5%85%A5%E9%97%A8/">
+  <body class="" data-url="/zh/b01-java%E5%85%A5%E9%97%A8/4-%E8%AF%AD%E6%B3%95%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -96,7 +96,7 @@
     
     <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/" title="B01 Java入门" class="dd-item 
         parent
-        active
+        
         
         ">
       <a href="/zh/b01-java%E5%85%A5%E9%97%A8/">
@@ -123,7 +123,7 @@
  
   
     
-      <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/4-%E8%AF%AD%E6%B3%95%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/" title="4 语法查漏补缺" class="dd-item ">
+      <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/4-%E8%AF%AD%E6%B3%95%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/" title="4 语法查漏补缺" class="dd-item active">
         <a href="/zh/b01-java%E5%85%A5%E9%97%A8/4-%E8%AF%AD%E6%B3%95%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/">
         4 语法查漏补缺
         <i class="fas fa-check read-icon"></i>
@@ -257,7 +257,7 @@
                   
                     
                     
-                      <option id="zh" value="https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/" selected>简体中文</option>
+                      <option id="zh" value="https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/4-%E8%AF%AD%E6%B3%95%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/" selected>简体中文</option>
                     
                   
               
@@ -303,7 +303,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/B01%20Java%e5%85%a5%e9%97%a8/_index.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/B01%20Java%e5%85%a5%e9%97%a8/4%20%e8%af%ad%e6%b3%95%e6%9f%a5%e6%bc%8f%e8%a1%a5%e7%bc%ba.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -330,7 +330,13 @@
             
           
           
-            <a href='/zh/'></a> > B01 Java入门
+            
+            
+          
+          
+            <a href='/zh/'></a> > <a href='/zh/b01-java%E5%85%A5%E9%97%A8/'>B01 Java入门</a> > 4 语法查漏补缺
+          
+        
           
         
           
@@ -341,7 +347,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-<nav id="TableOfContents"></nav>
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-用户交互-scanner">1 用户交互 Scanner</a></li>
+        <li><a href="#2-多选择结构-switch">2 多选择结构 switch</a></li>
+        <li><a href="#3-语法查漏">3 语法查漏</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -357,20 +373,91 @@
           
             <h1>
               
-              B01 Java入门
+              4 语法查漏补缺
             </h1>
           
 
         
 
 
+<h3 id="1-用户交互-scanner">1 用户交互 Scanner</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// next() 会跳过空格，并把空格作为分隔符，所以输出不会带有空格
+</span><span style="color:#75715e">// nextline() 会读取整行，遇到enter时停止读取，所以输出可以带空格
+</span><span style="color:#75715e">// hasNext() 与 hasNextline() 等待输入数据，返回boolean
+</span><span style="color:#75715e"></span>
+<span style="color:#f92672">import</span> java.util.Scanner<span style="color:#f92672">;</span>
 
-	
+<span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Demo</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 创建一个扫描器对象，用于接收键盘数据
+</span><span style="color:#75715e"></span>        Scanner scanner <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Scanner<span style="color:#f92672">(</span>System<span style="color:#f92672">.</span><span style="color:#a6e22e">in</span><span style="color:#f92672">);</span>
+        
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;请输入数据：&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#75715e">// 程序会在此处暂停，直到用户输入
+</span><span style="color:#75715e"></span>        String str <span style="color:#f92672">=</span> scanner<span style="color:#f92672">.</span><span style="color:#a6e22e">next</span><span style="color:#f92672">();</span>
+        
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;输出的内容为：&#34;</span> <span style="color:#f92672">+</span> str<span style="color:#f92672">);</span>
+        
+        <span style="color:#75715e">// 凡是属于IO流的类，如果不关闭会一直占用资源
+</span><span style="color:#75715e"></span>        scanner<span style="color:#f92672">.</span><span style="color:#a6e22e">close</span><span style="color:#f92672">();</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="2-多选择结构-switch">2 多选择结构 switch</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">char</span> grade <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;C&#39;</span><span style="color:#f92672">;</span>
+
+<span style="color:#75715e">//switch 匹配一个具体的值，每个case都需要break，否则会继续执行
+</span><span style="color:#75715e">//JDK7 以后，支持匹配字符串 String 了
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">switch</span> <span style="color:#f92672">(</span>grade<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;A&#39;</span><span style="color:#f92672">:</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;优秀&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;B&#39;</span><span style="color:#f92672">:</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;良好&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;C&#39;</span><span style="color:#f92672">:</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;及格&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">case</span> <span style="color:#e6db74">&#39;F&#39;</span><span style="color:#f92672">:</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;挂科&#34;</span><span style="color:#f92672">);</span>
+        <span style="color:#66d9ef">break</span><span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">default</span><span style="color:#f92672">:</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;未知等级&#34;</span><span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="3-语法查漏">3 语法查漏</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 判断字符串是否相等不能用 == ，而用 .equals()
+</span><span style="color:#75715e"></span>String s <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">if</span> <span style="color:#f92672">(</span>s<span style="color:#f92672">.</span><span style="color:#a6e22e">equals</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;Hello&#34;</span><span style="color:#f92672">))</span> <span style="color:#f92672">{</span>
+<span style="color:#f92672">}</span>
 
 
+<span style="color:#75715e">// do while 先执行后判断，至少执行一次
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">do</span> <span style="color:#f92672">{</span>
+    sum <span style="color:#f92672">+=</span> i<span style="color:#f92672">;</span>
+    i<span style="color:#f92672">++;</span>
+<span style="color:#f92672">}</span><span style="color:#66d9ef">while</span> <span style="color:#f92672">(</span>i <span style="color:#f92672">&lt;=</span> 100<span style="color:#f92672">);</span>
 
 
-<footer class=" footline" >
+<span style="color:#75715e">// 遍历数组内的元素
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span><span style="color:#f92672">[]</span> numbers <span style="color:#f92672">=</span> <span style="color:#f92672">{</span>10<span style="color:#f92672">,</span>20<span style="color:#f92672">,</span>30<span style="color:#f92672">,</span>40<span style="color:#f92672">,</span>50<span style="color:#f92672">};</span>
+<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">:</span> numbers<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+    System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>i<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+
+
+<span style="color:#75715e">// 反转数组内元素
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">int</span> len <span style="color:#f92672">=</span> numbers<span style="color:#f92672">.</span><span style="color:#a6e22e">length</span><span style="color:#f92672">;</span>
+<span style="color:#66d9ef">int</span> <span style="color:#f92672">[]</span> reuslt <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span><span style="color:#f92672">[</span>len<span style="color:#f92672">];</span>
+<span style="color:#66d9ef">for</span> <span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> i <span style="color:#f92672">=</span> 0<span style="color:#f92672">,</span> j <span style="color:#f92672">=</span> len<span style="color:#f92672">-</span>1<span style="color:#f92672">;</span> i <span style="color:#f92672">&lt;</span> len<span style="color:#f92672">;</span> i<span style="color:#f92672">++,</span> j<span style="color:#f92672">--)</span> <span style="color:#f92672">{</span>
+    result<span style="color:#f92672">[</span>j<span style="color:#f92672">]</span> <span style="color:#f92672">=</span> numbers<span style="color:#f92672">[</span>i<span style="color:#f92672">];</span>
+<span style="color:#f92672">}</span>
+System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>result<span style="color:#f92672">);</span>
+
+
+<span style="color:#75715e">// break 强制退出loop
+</span><span style="color:#75715e">// continue 中断本次loop，执行下次loop
+</span></code></pre></div>
+
+<footer class="footline">
 	
 </footer>
 
@@ -419,8 +506,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -437,6 +522,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -493,10 +581,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/zh/" title=""> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/zh/b01-java%E5%85%A5%E9%97%A8/" title="B01 Java入门"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/zh/b01-java%E5%85%A5%E9%97%A8/4-%E8%AF%AD%E6%B3%95%E6%9F%A5%E6%BC%8F%E8%A1%A5%E7%BC%BA/" title="4 语法查漏补缺" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/zh/b01-java%E5%85%A5%E9%97%A8/1-dos%E5%91%BD%E4%BB%A4/" title="1 DOS命令" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -526,3 +614,4 @@
 
   </body>
 </html>
+
