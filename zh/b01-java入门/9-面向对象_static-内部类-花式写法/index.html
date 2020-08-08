@@ -4,27 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.74.3" />
-    <meta name="description" content="Documentation for Hugo Learn Theme">
-<meta name="author" content="Mathieu Cornic">
+    <meta name="description" content="DeemoPoi&#39;s Notes">
+<meta name="author" content="DeemoPoi">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>9 面向对象_static 内部类 花式写法 :: Hugo 主题的 Learn 文档</title>
+    <title>9 面向对象_static 内部类 花式写法 :: DeemoPoi&#39;s Notes</title>
 
     
-    <link href="/css/nucleus.css?1596862804" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1596862804" rel="stylesheet">
-    <link href="/css/hybrid.css?1596862804" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1596862804" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1596862804" rel="stylesheet">
-    <link href="/css/auto-complete.css?1596862804" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1596862804" rel="stylesheet">
-    <link href="/css/theme.css?1596862804" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1596862804" rel="stylesheet">
+    <link href="/css/nucleus.css?1596871614" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596871614" rel="stylesheet">
+    <link href="/css/hybrid.css?1596871614" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596871614" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596871614" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596871614" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596871614" rel="stylesheet">
+    <link href="/css/theme.css?1596871614" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596871614" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1596862804"></script>
+    <script src="/js/jquery-3.3.1.min.js?1596871614"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1596862804"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1596862804"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1596871614"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1596871614"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/deemopoi.github.io\/\/zh";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1596862804"></script>
+<script type="text/javascript" src="/js/search.js?1596871614"></script>
 
     
   </div>
@@ -462,19 +462,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> GitHub 仓库</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://deemopoi.github.io/zh/showcase"><i class='fas fa-fw fa-camera'></i> 展示区</a>
+                  <a class="padding" href="https://github.com/DeemoPoi?tab=repositories"><i class='fab fa-fw fa-github'></i> GitHub 仓库</a>
               </li>
           
               <li> 
                   <a class="padding" href="https://gohugo.io/"><i class='fas fa-fw fa-bookmark'></i> Hugo 文档</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://deemopoi.github.io/zh/credits"><i class='fas fa-fw fa-bullhorn'></i> 鸣谢</a>
               </li>
           
         </ul>
@@ -549,7 +541,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/B01%20Java%e5%85%a5%e9%97%a8/9%20%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1_static%20%e5%86%85%e9%83%a8%e7%b1%bb%20%e8%8a%b1%e5%bc%8f%e5%86%99%e6%b3%95.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/DeemoPoi?tab=repositoriesB01%20Java%e5%85%a5%e9%97%a8/9%20%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1_static%20%e5%86%85%e9%83%a8%e7%b1%bb%20%e8%8a%b1%e5%bc%8f%e5%86%99%e6%b3%95.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -627,7 +619,7 @@
 
 
 <h3 id="1-static">1 static</h3>
-<p><strong>1.1 静态属性和静态方法</strong></p>
+<h5 id="11-静态属性和静态方法">1.1 静态属性和静态方法</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#f92672">{</span>
     
     <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span> <span style="color:#75715e">// 静态变量
@@ -653,7 +645,7 @@
 </span><span style="color:#75715e"></span>        s1<span style="color:#f92672">.</span><span style="color:#a6e22e">run</span><span style="color:#f92672">();</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p><strong>1.2 静态代码块</strong></p>
+</code></pre></div><h5 id="12-静态代码块">1.2 静态代码块</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">{</span>
     <span style="color:#75715e">// 2  也可以用来赋初始值
 </span><span style="color:#75715e"></span>    <span style="color:#f92672">{</span>
@@ -750,7 +742,7 @@
 
 <span style="color:#f92672">}</span>
 </code></pre></div><h3 id="3-类的花式写法">3 类的花式写法</h3>
-<p><strong>3.1 多个class</strong></p>
+<h5 id="31-多个class">3.1 多个class</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Outer</span> <span style="color:#f92672">{</span>
     
 <span style="color:#f92672">}</span>
@@ -761,7 +753,7 @@
         
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p><strong>3.2 局部内部类</strong></p>
+</code></pre></div><h5 id="32-局部内部类">3.2 局部内部类</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Outer</span> <span style="color:#f92672">{</span>
     
     <span style="color:#75715e">// 局部内部类，方法里的类（可以类比局部变量）
@@ -773,7 +765,7 @@
         <span style="color:#f92672">}</span>
     <span style="color:#f92672">}</span>
 <span style="color:#f92672">}</span>
-</code></pre></div><p><strong>3.3 匿名对象</strong></p>
+</code></pre></div><h5 id="33-匿名对象">3.3 匿名对象</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Test</span> <span style="color:#f92672">{</span>
     <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
         <span style="color:#75715e">// 没有名字 初始化类，不用将实例的地址保存到变量中
@@ -1118,19 +1110,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1596862804"></script>
-    <script src="/js/perfect-scrollbar.min.js?1596862804"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1596862804"></script>
-    <script src="/js/jquery.sticky.js?1596862804"></script>
-    <script src="/js/featherlight.min.js?1596862804"></script>
-    <script src="/js/highlight.pack.js?1596862804"></script>
+    <script src="/js/clipboard.min.js?1596871614"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596871614"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596871614"></script>
+    <script src="/js/jquery.sticky.js?1596871614"></script>
+    <script src="/js/featherlight.min.js?1596871614"></script>
+    <script src="/js/highlight.pack.js?1596871614"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1596862804"></script>
-    <script src="/js/learn.js?1596862804"></script>
-    <script src="/js/hugo-learn.js?1596862804"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596871614"></script>
+    <script src="/js/learn.js?1596871614"></script>
+    <script src="/js/hugo-learn.js?1596871614"></script>
 
-    <link href="/mermaid/mermaid.css?1596862804" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1596862804"></script>
+    <link href="/mermaid/mermaid.css?1596871614" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596871614"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

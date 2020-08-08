@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo 主题的 Learn 文档</title>
+    <title>DeemoPoi&#39;s Notes</title>
     <link>https://deemopoi.github.io/zh/</link>
-    <description>Recent content on Hugo 主题的 Learn 文档</description>
+    <description>Recent content on DeemoPoi&#39;s Notes</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate>
@@ -19,7 +19,7 @@
       <guid>https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/1-%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A8/</guid>
       <description>1 汇编语言的由来 什么是机器语言
 # 我们目前主流的电子计算机 状态： 0 和 1 # 最早的程序员，穿孔卡带 加 0100 0000（瞎写的） 减 0100 1000 乘 0100 1000 0100 1000 除 0100 1000 1100 1000 这些复杂的机器语言，能简化吗？
-助记符！**汇编语言！**把人类能够理解的语言，用编译器，转换为机器能够理解的语言
+助记符！**汇编语言! **把人类能够理解的语言，用编译器，转换为机器能够理解的语言
 加 INC --编译器--&amp;gt; 0100 0000 减 DEC 0100 1000 乘 MUL 0100 1000 0100 1000 除 DIV 0100 1000 1100 1000 汇编一般用于底层的编写，单片机，暴力破解，外挂。。。
  C语言
 加 + --编译器--&amp;gt; 0100 0000 减 - 0100 1000乘 * 0100 1000 0100 1000除 / 0100 1000 1100 1000之后才诞生了C++</description>
@@ -40,8 +40,8 @@
       <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/2-%E8%BF%9B%E5%88%B6-%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0-%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
-      <description>1 进制 二进制: 0 1111 0 1 10 11 100 101 110 111 1000 1001 1010 1011 1100 1101 1110 1111 二进制这么去写很麻烦，能否简写？16进制！
-0 1 2 3 4 5 6 7 8 9 a b c d e f 为什么学习二进制？
+      <description>1 进制 二进制: 0 1111 0 1 10 11 100 101 110 111 1000 1001 1010 1011 1100 1101 1110 1111 二进制这么去写很麻烦，能否简写？16进制!
+0 1 2 3 4 5 6 7 8 9 a b c d e f 为什么学习二进制?
 寄存器、内存、位！底层的每一个位都是有含义的，汇编入门理解的基础。
 汇编高级：了解程序的深层！操作系统的内核
 2 数据宽度 C ，C++，Java 都需要定义数据的类型。计算机底层需要我们给这些数据定义宽度。
@@ -134,8 +134,8 @@ FFFFFFFF FFFF FF 0000 0000 32 位 16位 8位 EAX AX AL ECX CX CL EDX DX DL EBX B
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
-      <description>1 面向对象概念 **面向对象编程的本质：**以类的方式组织代码，以对象的组织（封装）数据
-三大特性：
+      <description>1 面向对象概念 面向对象编程的本质: 以类的方式组织代码，以对象的组织（封装）数据
+三大特性:
   封装
   继承
   多态
@@ -150,11 +150,11 @@ FFFFFFFF FFFF FF 0000 0000 32 位 16位 8位 EAX AX AL ECX CX CL EDX DX DL EBX B
       <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/7-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_%E5%B0%81%E8%A3%85-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81/</guid>
-      <description>1 封装 1.1 该露的露，该藏的藏 **高内聚：**类的内部数据操作细节自己完成，不允许外部干涉。
-**低耦合：**仅暴露少量的方法给外部使用。
+      <description>1 封装 1.1 该露的露，该藏的藏 **高内聚:**类的内部数据操作细节自己完成，不允许外部干涉。
+**低耦合:**仅暴露少量的方法给外部使用。
 1.2 封装（数据的隐藏） 禁止直接访问一个对象中数据的实际表示，而应该通过操作接口来访问，称为信息隐蔽。
 1.3 属性私有，get/set 重点对于属性，而不是方法。
-IDEA快捷键： Alt + insert
+IDEA快捷键: Alt + insert
 1.4 总结  提高程序的安全性，保护数据 隐藏代码的实现细节 统一接口，形成规范 增加系统的可维护性  public class Student { // 属性私有，无法直接外部调用了  private String name; private int id; private char gender; private int age; // 提供一些可操作这个属性的方法!  // 提供一些public 的 get/set 方法  // get 获取这个数据  public String getName() { return this.name; } // set 给这个数据设置值  public void setName(String name) { this.</description>
     </item>
     
@@ -177,9 +177,7 @@ IDEA快捷键： Alt + insert
       <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/9-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_static-%E5%86%85%E9%83%A8%E7%B1%BB-%E8%8A%B1%E5%BC%8F%E5%86%99%E6%B3%95/</guid>
-      <description>1 static 1.1 静态属性和静态方法
-public class Student { private static int age; // 静态变量  private double score; // 非静态变量  public static void go() { } public void run() { } public static void main(String[] args) { Student s1 = new Student(); System.out.println(Student.age); // System.out.println(Student.score); 非静态，不能直接调用  System.out.println(s1.age); System.out.println(s1.score); Student.go(); // 或者 go();  s1.run(); } } 1.2 静态代码块
-public class Person { // 2 也可以用来赋初始值  { System.out.println(&amp;#34;匿名代码块&amp;#34;)； } // 1 只执行一次  static { System.</description>
+      <description>1 static 1.1 静态属性和静态方法 public class Student { private static int age; // 静态变量  private double score; // 非静态变量  public static void go() { } public void run() { } public static void main(String[] args) { Student s1 = new Student(); System.out.println(Student.age); // System.out.println(Student.score); 非静态，不能直接调用  System.out.println(s1.age); System.out.println(s1.score); Student.go(); // 或者 go();  s1.run(); } } 1.2 静态代码块 public class Person { // 2 也可以用来赋初始值  { System.out.println(&amp;#34;匿名代码块&amp;#34;)； } // 1 只执行一次  static { System.</description>
     </item>
     
     <item>
@@ -194,8 +192,8 @@ public class Person { // 2 也可以用来赋初始值  { System.out.println(&am
 ​	- Non-RuntimeException
   2 异常处理机制   抛出异常
   捕获异常
-  **异常处理的五个关键词：**try, catch, finally, throw, throws
-**IDEA快捷键：**选中想要监控的代码 Ctrl + Alt + T
+  异常处理的五个关键词: try, catch, finally, throw, throws
+IDEA快捷键: 选中想要监控的代码 Ctrl + Alt + T
 2.1 try, catch, finally public class Test { public void a() { b(); } public void b() { a(); } public static void main(String[] args) { int a = 1; int b = 0; try { // try 监控区域（此处可能会出现异常）  System.</description>
     </item>
     

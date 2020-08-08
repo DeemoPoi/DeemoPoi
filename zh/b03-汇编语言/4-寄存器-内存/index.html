@@ -4,27 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.74.3" />
-    <meta name="description" content="Documentation for Hugo Learn Theme">
-<meta name="author" content="Mathieu Cornic">
+    <meta name="description" content="DeemoPoi&#39;s Notes">
+<meta name="author" content="DeemoPoi">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>4 寄存器 内存 :: Hugo 主题的 Learn 文档</title>
+    <title>4 寄存器 内存 :: DeemoPoi&#39;s Notes</title>
 
     
-    <link href="/css/nucleus.css?1596862804" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1596862804" rel="stylesheet">
-    <link href="/css/hybrid.css?1596862804" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1596862804" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1596862804" rel="stylesheet">
-    <link href="/css/auto-complete.css?1596862804" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1596862804" rel="stylesheet">
-    <link href="/css/theme.css?1596862804" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1596862804" rel="stylesheet">
+    <link href="/css/nucleus.css?1596871614" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596871614" rel="stylesheet">
+    <link href="/css/hybrid.css?1596871614" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596871614" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596871614" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596871614" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596871614" rel="stylesheet">
+    <link href="/css/theme.css?1596871614" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596871614" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1596862804"></script>
+    <script src="/js/jquery-3.3.1.min.js?1596871614"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1596862804"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1596862804"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1596871614"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1596871614"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/deemopoi.github.io\/\/zh";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1596862804"></script>
+<script type="text/javascript" src="/js/search.js?1596871614"></script>
 
     
   </div>
@@ -462,19 +462,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> GitHub 仓库</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://deemopoi.github.io/zh/showcase"><i class='fas fa-fw fa-camera'></i> 展示区</a>
+                  <a class="padding" href="https://github.com/DeemoPoi?tab=repositories"><i class='fab fa-fw fa-github'></i> GitHub 仓库</a>
               </li>
           
               <li> 
                   <a class="padding" href="https://gohugo.io/"><i class='fas fa-fw fa-bookmark'></i> Hugo 文档</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://deemopoi.github.io/zh/credits"><i class='fas fa-fw fa-bullhorn'></i> 鸣谢</a>
               </li>
           
         </ul>
@@ -549,7 +541,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/B03%20%e6%b1%87%e7%bc%96%e8%af%ad%e8%a8%80/4%20%e5%af%84%e5%ad%98%e5%99%a8%20%e5%86%85%e5%ad%98.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/DeemoPoi?tab=repositoriesB03%20%e6%b1%87%e7%bc%96%e8%af%ad%e8%a8%80/4%20%e5%af%84%e5%ad%98%e5%99%a8%20%e5%86%85%e5%ad%98.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -651,7 +643,7 @@ EDI         DI        BH
 <p>除了这些通用寄存器之外，其他的寄存器每一位都有自己特定的功能。</p>
 <h3 id="2-内存">2 内存</h3>
 <p>寄存器很小，而且不够用，于是我们都把数据放到内存中。</p>
-<p><strong>32位的寻址能力：</strong></p>
+<p><strong>32位的寻址能力:</strong></p>
 <p>F 代表 1111，4bits</p>
 <p>8个F就是，32bits (位)</p>
 <p>内存地址：0x00000000 - 0xFFFFFFFF = 0x1 0000 0000 个内存地址</p>
@@ -661,7 +653,7 @@ EDI         DI        BH
 <p>这就解释了为什么32位的CPU最大只支持4GB内存！</p>
 <p>而64位的寻址能力： 0x00000000 00000000 - 0xFFFFFFFF FFFFFFFF 绰绰有余！</p>
 <p>所以每个内存地址都有一个编号，可以通过这些编号往里面存值。</p>
-<p><strong>内存如何存值？</strong></p>
+<p><strong>内存如何存值?</strong></p>
 <p>数据宽度：</p>
 <ul>
 <li>Byte(0xFF)    8 bits (位)</li>
@@ -1005,19 +997,19 @@ ds:<span style="color:#f92672">[</span>reg+reg*<span style="color:#f92672">{</sp
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1596862804"></script>
-    <script src="/js/perfect-scrollbar.min.js?1596862804"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1596862804"></script>
-    <script src="/js/jquery.sticky.js?1596862804"></script>
-    <script src="/js/featherlight.min.js?1596862804"></script>
-    <script src="/js/highlight.pack.js?1596862804"></script>
+    <script src="/js/clipboard.min.js?1596871614"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596871614"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596871614"></script>
+    <script src="/js/jquery.sticky.js?1596871614"></script>
+    <script src="/js/featherlight.min.js?1596871614"></script>
+    <script src="/js/highlight.pack.js?1596871614"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1596862804"></script>
-    <script src="/js/learn.js?1596862804"></script>
-    <script src="/js/hugo-learn.js?1596862804"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596871614"></script>
+    <script src="/js/learn.js?1596871614"></script>
+    <script src="/js/hugo-learn.js?1596871614"></script>
 
-    <link href="/mermaid/mermaid.css?1596862804" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1596862804"></script>
+    <link href="/mermaid/mermaid.css?1596871614" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596871614"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

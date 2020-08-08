@@ -4,27 +4,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.74.3" />
-    <meta name="description" content="Documentation for Hugo Learn Theme">
-<meta name="author" content="Mathieu Cornic">
+    <meta name="description" content="DeemoPoi&#39;s Notes">
+<meta name="author" content="DeemoPoi">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>7 面向对象_封装 继承 多态 :: Hugo 主题的 Learn 文档</title>
+    <title>7 面向对象_封装 继承 多态 :: DeemoPoi&#39;s Notes</title>
 
     
-    <link href="/css/nucleus.css?1596862804" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1596862804" rel="stylesheet">
-    <link href="/css/hybrid.css?1596862804" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1596862804" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1596862804" rel="stylesheet">
-    <link href="/css/auto-complete.css?1596862804" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1596862804" rel="stylesheet">
-    <link href="/css/theme.css?1596862804" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1596862804" rel="stylesheet">
+    <link href="/css/nucleus.css?1596871614" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1596871614" rel="stylesheet">
+    <link href="/css/hybrid.css?1596871614" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1596871614" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1596871614" rel="stylesheet">
+    <link href="/css/auto-complete.css?1596871614" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1596871614" rel="stylesheet">
+    <link href="/css/theme.css?1596871614" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1596871614" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1596862804"></script>
+    <script src="/js/jquery-3.3.1.min.js?1596871614"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -69,14 +69,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1596862804"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1596862804"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1596871614"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1596871614"></script>
 <script type="text/javascript">
     
         var baseurl = "https:\/\/deemopoi.github.io\/\/zh";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1596862804"></script>
+<script type="text/javascript" src="/js/search.js?1596871614"></script>
 
     
   </div>
@@ -462,19 +462,11 @@
         <ul>
           
               <li> 
-                  <a class="padding" href="https://github.com/matcornic/hugo-theme-learn"><i class='fab fa-fw fa-github'></i> GitHub 仓库</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://deemopoi.github.io/zh/showcase"><i class='fas fa-fw fa-camera'></i> 展示区</a>
+                  <a class="padding" href="https://github.com/DeemoPoi?tab=repositories"><i class='fab fa-fw fa-github'></i> GitHub 仓库</a>
               </li>
           
               <li> 
                   <a class="padding" href="https://gohugo.io/"><i class='fas fa-fw fa-bookmark'></i> Hugo 文档</a>
-              </li>
-          
-              <li> 
-                  <a class="padding" href="https://deemopoi.github.io/zh/credits"><i class='fas fa-fw fa-bullhorn'></i> 鸣谢</a>
               </li>
           
         </ul>
@@ -549,7 +541,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/B01%20Java%e5%85%a5%e9%97%a8/7%20%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1_%e5%b0%81%e8%a3%85%20%e7%bb%a7%e6%89%bf%20%e5%a4%9a%e6%80%81.md" target="blank">
+                    <a class="github-link" title='' href="https://github.com/DeemoPoi?tab=repositoriesB01%20Java%e5%85%a5%e9%97%a8/7%20%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1_%e5%b0%81%e8%a3%85%20%e7%bb%a7%e6%89%bf%20%e5%a4%9a%e6%80%81.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text"></span>
                     </a>
@@ -628,13 +620,13 @@
 
 <h3 id="1-封装">1 封装</h3>
 <h5 id="11-该露的露该藏的藏">1.1 该露的露，该藏的藏</h5>
-<p>**高内聚：**类的内部数据操作细节自己完成，不允许外部干涉。</p>
-<p>**低耦合：**仅暴露少量的方法给外部使用。</p>
+<p>**高内聚:**类的内部数据操作细节自己完成，不允许外部干涉。</p>
+<p>**低耦合:**仅暴露少量的方法给外部使用。</p>
 <h5 id="12-封装数据的隐藏">1.2 封装（数据的隐藏）</h5>
 <p>禁止直接访问一个对象中数据的实际表示，而应该通过操作接口来访问，称为信息隐蔽。</p>
 <h5 id="13-属性私有getset">1.3 属性私有，get/set</h5>
 <p>重点对于属性，而不是方法。</p>
-<p><strong>IDEA快捷键：</strong> Alt + insert</p>
+<p><strong>IDEA快捷键:</strong> Alt + insert</p>
 <h5 id="14-总结">1.4 总结</h5>
 <ol>
 <li>提高程序的安全性，保护数据</li>
@@ -685,7 +677,7 @@
 <p>一个儿子只能有一个爸爸，一个爸爸可以有多个儿子</p>
 <h5 id="24-object-类">2.4 object 类</h5>
 <p>在 Java 中，所有的类都默认直接或间接继承 object 类</p>
-<p>**IDEA查看继承关系的快捷键：**Ctrl + H</p>
+<p><strong>IDEA查看继承关系的快捷键:</strong> Ctrl + H</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 父类
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">{</span>
        
@@ -845,9 +837,9 @@
 <p>ClassNotFoundException &lt; Exception</p>
 </li>
 </ol>
-<p><strong>为什么要重写？</strong></p>
+<p><strong>为什么要重写?</strong></p>
 <p>​	父类的功能，子类不一定要需要，或者不一定满足</p>
-<p>**IDEA快捷键：**Alt + insert ，选 override</p>
+<p><strong>IDEA快捷键:</strong> Alt + insert ，选 override</p>
 <p><strong>非静态方法</strong></p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 重写是方法的重写，与属性无关
 </span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">B</span> <span style="color:#f92672">{</span>
@@ -1364,19 +1356,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1596862804"></script>
-    <script src="/js/perfect-scrollbar.min.js?1596862804"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1596862804"></script>
-    <script src="/js/jquery.sticky.js?1596862804"></script>
-    <script src="/js/featherlight.min.js?1596862804"></script>
-    <script src="/js/highlight.pack.js?1596862804"></script>
+    <script src="/js/clipboard.min.js?1596871614"></script>
+    <script src="/js/perfect-scrollbar.min.js?1596871614"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1596871614"></script>
+    <script src="/js/jquery.sticky.js?1596871614"></script>
+    <script src="/js/featherlight.min.js?1596871614"></script>
+    <script src="/js/highlight.pack.js?1596871614"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1596862804"></script>
-    <script src="/js/learn.js?1596862804"></script>
-    <script src="/js/hugo-learn.js?1596862804"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1596871614"></script>
+    <script src="/js/learn.js?1596871614"></script>
+    <script src="/js/hugo-learn.js?1596871614"></script>
 
-    <link href="/mermaid/mermaid.css?1596862804" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1596862804"></script>
+    <link href="/mermaid/mermaid.css?1596871614" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1596871614"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
