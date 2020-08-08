@@ -6,10 +6,24 @@
     <description>Recent content on Hugo 主题的 Learn 文档</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Tue, 04 Aug 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 07 Aug 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://deemopoi.github.io/zh/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>1 汇编介绍</title>
+      <link>https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/1-%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/1-%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A8/</guid>
+      <description>1 汇编语言的由来 什么是机器语言
+# 我们目前主流的电子计算机 状态： 0 和 1 # 最早的程序员，穿孔卡带 加 0100 0000（瞎写的） 减 0100 1000 乘 0100 1000 0100 1000 除 0100 1000 1100 1000 这些复杂的机器语言，能简化吗？
+助记符！**汇编语言！**把人类能够理解的语言，用编译器，转换为机器能够理解的语言
+加 INC --编译器--&amp;gt; 0100 0000 减 DEC 0100 1000 乘 MUL 0100 1000 0100 1000 除 DIV 0100 1000 1100 1000 汇编一般用于底层的编写，单片机，暴力破解，外挂。。。
+ C语言
+加 + --编译器--&amp;gt; 0100 0000 减 - 0100 1000乘 * 0100 1000 0100 1000除 / 0100 1000 1100 1000之后才诞生了C++</description>
+    </item>
     
     <item>
       <title>1 DOS命令</title>
@@ -18,6 +32,20 @@
       
       <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/1-dos%E5%91%BD%E4%BB%A4/</guid>
       <description>1 打开CMD的方式  在任意文件夹下面，按住 shift+鼠标右键，可以在此处打开powershell 在资源管理器的地址栏，前面加上 cmd+空格，可以在此地址打开cmd  2 常用DOS命令 # 基本操作 &amp;gt;D: (盘符切换) &amp;gt;dir (directory) &amp;gt;cd (change directory) &amp;gt;cd.. (返回上一级) &amp;gt;cls (clear screen) &amp;gt;md (make directory) &amp;gt;rd (remove directory) &amp;gt;cd&amp;gt;text.txt (创建文件) &amp;gt;del text.txt (删除文件) &amp;gt;ipconfig (查看电脑ip) &amp;gt;选中后回车 (复制) &amp;gt;右键 (粘贴，有些不可以用 Ctrl + V 粘贴) # 打开应用 &amp;gt;calc (calculator) &amp;gt;mspaint (画图工具) &amp;gt;notepad # ping 命令 &amp;gt;ping www.baidu.com </description>
+    </item>
+    
+    <item>
+      <title>2 进制 有符号数 位运算</title>
+      <link>https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/2-%E8%BF%9B%E5%88%B6-%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0-%E4%BD%8D%E8%BF%90%E7%AE%97/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/2-%E8%BF%9B%E5%88%B6-%E6%9C%89%E7%AC%A6%E5%8F%B7%E6%95%B0-%E4%BD%8D%E8%BF%90%E7%AE%97/</guid>
+      <description>1 进制 二进制: 0 1111 0 1 10 11 100 101 110 111 1000 1001 1010 1011 1100 1101 1110 1111 二进制这么去写很麻烦，能否简写？16进制！
+0 1 2 3 4 5 6 7 8 9 a b c d e f 为什么学习二进制？
+寄存器、内存、位！底层的每一个位都是有含义的，汇编入门理解的基础。
+汇编高级：了解程序的深层！操作系统的内核
+2 数据宽度 C ，C++，Java 都需要定义数据的类型。计算机底层需要我们给这些数据定义宽度。
+   位 bit 0 1     字节 Byte 0-0xFF   字 Word 0-0xFFFF   双字 DWORD 0-0xFFFFFFFF    在计算机中，每一个数据都需要给它定义类型，也就是定义宽度，在内存中的宽度。</description>
     </item>
     
     <item>
@@ -38,14 +66,48 @@ Java (2006: Hadoop 大数据领域 | 2008: Android 手机端)  2 Java介绍 2.1 
     </item>
     
     <item>
+      <title>3 汇编学习指南</title>
+      <link>https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/3-%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/3-%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/</guid>
+      <description>1 学习指南 通过汇编指令，可以给计算机发一些操作，然后让计算机执行，编译器。如果学底层，千万别用很智能的编译器，底层的大佬几乎都是用最原始的IDE学习汇编的。
+ 很多人学C，都用linux学C，直接用vim编辑器写C，通过gcc来执行
+ 学习汇编之前，大家需要先掌握环境配置：
+ VC6（写C++的话，建议用 VC6 学汇编，别用Java去学汇编） OD（我爱破解） 抓包工具（学计算机网络的话） 加密解密工具  学完汇编以后，再去学JVM，会觉得很简单
+ 学汇编不是为了写代码，而是为了理解程序的本质。
+ 学习资料
+《汇编语言》 16位的汇编，但是现在的操作系统都是32位的，或者基于32位的64位
+建议直接学习32位汇编！</description>
+    </item>
+    
+    <item>
       <title>3 数据类型和运算</title>
       <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97/</link>
       <pubDate>Mon, 03 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/3-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E8%BF%90%E7%AE%97/</guid>
       <description>1 数据类型 1.1 强类型语言： (例如 Java | 速度慢些) 要求变量的使用要严格符合规定，所有变量都必须先定义后才能使用
-1.2 弱类型语言： (例如 VB, JS) 1.3 Java的数据类型分为两大类： 内置类型 (primitive type)
+1.2 弱类型语言： (例如 VB, JS) 1.3 Java的数据类型分为两大类： 基本类型 (primitive type)
 // integer byte num1 = 10; // 1 byte (-128, 127) short num2 = 20; // 2 bytes (-32768, 32767) int num3 = 30; // 4 bytes (-2,147,483,648, 2,147,483,647) long num4 = 40L; // 8 bytes (-2^63, 2^63 -1)  // decimal float num = 50.1f; // 4 bytes 避免用float进行比较 double num = 3.</description>
+    </item>
+    
+    <item>
+      <title>4 寄存器 内存</title>
+      <link>https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/4-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/4-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98/</guid>
+      <description>1 通用寄存器 存储数据：CPU &amp;gt; 内存 &amp;gt; 硬盘
+32位CPU 8 16 32
+64位CPU 8 16 32 64
+通用寄存器，可以存储任意的东西
+# 32位的通用寄存器只有8个，存值的范围（0-FFFFFFFF） 计算机如何向寄存器里存值
+对于二进制来说，直接修改值
+对于汇编，用 mov 指令
+mov 存的地址,存的数 （可以将数字写入寄存器） mov 写入地址1,从地址2 （可以将寄存器中的值写到寄存器） 不同的寄存器
+FFFFFFFF FFFF FF 0000 0000 32 位 16位 8位 EAX AX AL ECX CX CL EDX DX DL EBX BX BL ESP SP AH ENP NP CH ESI SI DH EDI DI BH 8位：L 低8位， H 高8位 （高8位+低8位，也是16位的状态）
+除了这些通用寄存器之外，其他的寄存器每一位都有自己特定的功能。</description>
     </item>
     
     <item>
@@ -60,10 +122,81 @@ Java (2006: Hadoop 大数据领域 | 2008: Android 手机端)  2 Java介绍 2.1 
     <item>
       <title>5 方法和数组</title>
       <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/5-%E6%96%B9%E6%B3%95%E5%92%8C%E6%95%B0%E7%BB%84/</link>
-      <pubDate>Tue, 04 Aug 2020 00:00:00 +0000</pubDate>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/5-%E6%96%B9%E6%B3%95%E5%92%8C%E6%95%B0%E7%BB%84/</guid>
-      <description>1 method // method 的名字可以相同，但参数列表要不同  public class Demo { // 类方法 static 无需实例化，能够直接调用  public static int plus(int a, int b) { return a + b; } // 实例方法，需要实例化才能调用  public int minus(int a, int b) { return a - b; } // (数量)可变参数  public static void printMax(double... numbers) { double result = numbers[0]; // 排序  for (int i = 1; i &amp;lt; numbers.length; i++) { if (number[i] &amp;gt; result) { result = number[i]; } } System.</description>
+      <description>1 method public class Student { // 静态方法，跟class一起加载的，直接调用  public static void say() { System.out.println(&amp;#34;学生说话了&amp;#34;); } // 实例方法，实例化以后才能调用  public void run() { System.out.println(&amp;#34;学生跑了&amp;#34;) } } // method 的名字可以相同，但参数列表要不同  public class Demo { // static 无需实例化，能够直接调用  public static int plus(int a, int b) { return a + b; } // 需要实例化才能调用  public int minus(int a, int b) { return a - b; } // (数量)可变参数  public static void printMax(double.</description>
+    </item>
+    
+    <item>
+      <title>6 面向对象</title>
+      <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
+      <description>1 面向对象概念 **面向对象编程的本质：**以类的方式组织代码，以对象的组织（封装）数据
+三大特性：
+  封装
+  继承
+  多态
+   从认知的角度考虑，是先有对象后有类。对象，是具体的事物；类，是抽象的，是对象的抽象。
+  从代码的角度考虑，是先有类后有对象。类是对象的模板，对象是类的实例。
+ 2 类 和 对象 // Student类 public class Student { // 属性：字段（这里不赋值，实例化以后才赋值）  String name; // null  int age; // 0  // 方法  public void study() { // this. 指的是本class内部的  System.out.println(this.name + &amp;#34; is learning.&amp;#34;); } } // 主类 public class Application { // 主类才有main方法  public static void main(String[] args) { // 把Student这个 类 实例化为 对象  Student tom = new Student(); Student mary = new Student(); // 把tom内的属性进行赋值  tom.</description>
+    </item>
+    
+    <item>
+      <title>7 面向对象_封装 继承 多态</title>
+      <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/7-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_%E5%B0%81%E8%A3%85-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81/</link>
+      <pubDate>Wed, 05 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/7-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_%E5%B0%81%E8%A3%85-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81/</guid>
+      <description>1 封装 1.1 该露的露，该藏的藏 **高内聚：**类的内部数据操作细节自己完成，不允许外部干涉。
+**低耦合：**仅暴露少量的方法给外部使用。
+1.2 封装（数据的隐藏） 禁止直接访问一个对象中数据的实际表示，而应该通过操作接口来访问，称为信息隐蔽。
+1.3 属性私有，get/set 重点对于属性，而不是方法。
+IDEA快捷键： Alt + insert
+1.4 总结  提高程序的安全性，保护数据 隐藏代码的实现细节 统一接口，形成规范 增加系统的可维护性  public class Student { // 属性私有，无法直接外部调用了  private String name; private int id; private char gender; private int age; // 提供一些可操作这个属性的方法!  // 提供一些public 的 get/set 方法  // get 获取这个数据  public String getName() { return this.name; } // set 给这个数据设置值  public void setName(String name) { this.</description>
+    </item>
+    
+    <item>
+      <title>8 面向对象_abstract interface</title>
+      <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/8-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_abstract-interface/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/8-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_abstract-interface/</guid>
+      <description>1 抽象类 abstract  抽象的抽象：约束
+   不能 new 这个抽象类，只能靠子类去实现它：约束
+  抽象类中可以写普通方法
+  抽象方法必须在抽象类中
+  // abstract 抽象类，本质是类，extends 只能单继承，不能多继承（而接口可以） public abstract calss Action { // 约束，有人帮我们实现  // abstract 抽象方法，只有方法名字，没有方法的实现  public abstract void doSomething(); // 抽象类里面的普通方法  public void run() { System.out.println(&amp;#34;run&amp;#34;); } } // 抽象类中的所有抽象方法，必须要继承了它的子类去重写，来实现这些方法； // 除非继承它的子类 A 也是个抽象类，那么就需要子类 A 的子类去实现了 public class A extends Action { @Override public void doSomething() { } } 2 接口 interface / implements  抽象类是抽象的抽象，是约束，抽象类有具体的实现（普通方法）和规范（抽象方法）；</description>
+    </item>
+    
+    <item>
+      <title>9 面向对象_static 内部类 花式写法</title>
+      <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/9-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_static-%E5%86%85%E9%83%A8%E7%B1%BB-%E8%8A%B1%E5%BC%8F%E5%86%99%E6%B3%95/</link>
+      <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/9-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_static-%E5%86%85%E9%83%A8%E7%B1%BB-%E8%8A%B1%E5%BC%8F%E5%86%99%E6%B3%95/</guid>
+      <description>1 static 1.1 静态属性和静态方法
+public class Student { private static int age; // 静态变量  private double score; // 非静态变量  public static void go() { } public void run() { } public static void main(String[] args) { Student s1 = new Student(); System.out.println(Student.age); // System.out.println(Student.score); 非静态，不能直接调用  System.out.println(s1.age); System.out.println(s1.score); Student.go(); // 或者 go();  s1.run(); } } 1.2 静态代码块
+public class Person { // 2 也可以用来赋初始值  { System.out.println(&amp;#34;匿名代码块&amp;#34;)； } // 1 只执行一次  static { System.</description>
+    </item>
+    
+    <item>
+      <title>10 异常</title>
+      <link>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/10-%E5%BC%82%E5%B8%B8/</link>
+      <pubDate>Fri, 07 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/10-%E5%BC%82%E5%B8%B8/</guid>
+      <description>1 异常分类 1.1 异常的分类  检查性异常：用户错误或问题导致，程序员无法预见，例如打开一个不存在的文件 运行时异常：可以被程序员避免的异常，编译的时候看不到，只有运行了才知道 错误Error：错误不是异常，而是脱离程序员控制的问题，例如stack overflow  1.2 异常体系结构   Error 程序无法控制和处理，可能导致Java虚拟机(JVM) 终止线程，强行关掉，后果严重
+  Exception 一般是可以被程序处理的，并且在程序中应该尽可能去处理这些异常
+​	- RuntimeException
+​	- Non-RuntimeException
+  2 异常处理机制   抛出异常
+  捕获异常
+  **异常处理的五个关键词：**try, catch, finally, throw, throws
+**IDEA快捷键：**选中想要监控的代码 Ctrl + Alt + T
+2.1 try, catch, finally public class Test { public void a() { b(); } public void b() { a(); } public static void main(String[] args) { int a = 1; int b = 0; try { // try 监控区域（此处可能会出现异常）  System.</description>
     </item>
     
   </channel>

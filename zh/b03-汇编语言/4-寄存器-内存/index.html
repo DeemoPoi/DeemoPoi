@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: Hugo 主题的 Learn 文档</title>
+    <title>4 寄存器 内存 :: Hugo 主题的 Learn 文档</title>
 
     
     <link href="/css/nucleus.css?1596862178" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/zh/categories/">
+  <body class="" data-url="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/4-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -341,8 +341,8 @@
   
     
     <li data-nav-id="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" title="B03 汇编语言s" class="dd-item 
+        parent
         
-        active
         
         ">
       <a href="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">
@@ -432,7 +432,7 @@
  
   
     
-      <li data-nav-id="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/4-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98/" title="4 寄存器 内存" class="dd-item ">
+      <li data-nav-id="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/4-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98/" title="4 寄存器 内存" class="dd-item active">
         <a href="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/4-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98/">
         4 寄存器 内存
         <i class="fas fa-check read-icon"></i>
@@ -497,41 +497,13 @@
               
               
                   
-                    
-                    
-                      <option id="en" value="https://deemopoi.github.io/en/categories/">English</option>
-                    
-                  
-              
-                  
-              
-                  
-              
-          
-              
               
                   
               
                   
                     
                     
-                      <option id="fr" value="https://deemopoi.github.io/fr/categories/">Français</option>
-                    
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="zh" value="https://deemopoi.github.io/zh/categories/" selected>简体中文</option>
+                      <option id="zh" value="https://deemopoi.github.io/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/4-%E5%AF%84%E5%AD%98%E5%99%A8-%E5%86%85%E5%AD%98/" selected>简体中文</option>
                     
                   
               
@@ -573,6 +545,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/B03%20%e6%b1%87%e7%bc%96%e8%af%ad%e8%a8%80/4%20%e5%af%84%e5%ad%98%e5%99%a8%20%e5%86%85%e5%ad%98.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -593,7 +576,13 @@
             
           
           
-            <a href='/zh/'></a> > Categories
+            
+            
+          
+          
+            <a href='/zh/'></a> > <a href='/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/'>B03 汇编语言s</a> > 4 寄存器 内存
+          
+        
           
         
           
@@ -604,7 +593,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1--通用寄存器">1  通用寄存器</a></li>
+        <li><a href="#2-内存">2 内存</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -620,24 +618,78 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Categories
+              4 寄存器 内存
             </h1>
           
 
         
 
 
-
-
-
+<h3 id="1--通用寄存器">1  通用寄存器</h3>
+<p>存储数据：CPU &gt; 内存 &gt; 硬盘</p>
+<p>32位CPU   8  16  32</p>
+<p>64位CPU   8  16  32  64</p>
+<p><strong>通用寄存器</strong>，可以存储任意的东西</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 32位的通用寄存器只有8个，存值的范围（0-FFFFFFFF）</span>
+</code></pre></div><p><strong>计算机如何向寄存器里存值</strong></p>
+<p>对于二进制来说，直接修改值</p>
+<p>对于汇编，用 mov 指令</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">mov 存的地址,存的数 （可以将数字写入寄存器）
+mov 写入地址1,从地址2 （可以将寄存器中的值写到寄存器）
+</code></pre></div><p><strong>不同的寄存器</strong></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">FFFFFFFF    FFFF      FF  <span style="color:#ae81ff">0000</span> <span style="color:#ae81ff">0000</span>
+<span style="color:#ae81ff">32</span> 位       16位       8位
+EAX         AX        AL
+ECX         CX        CL
+EDX         DX        DL
+EBX         BX        BL
+ESP         SP        AH
+ENP         NP        CH
+ESI         SI        DH
+EDI         DI        BH
+</code></pre></div><p>8位：L 低8位，  H 高8位 （高8位+低8位，也是16位的状态）</p>
+<p>除了这些通用寄存器之外，其他的寄存器每一位都有自己特定的功能。</p>
+<h3 id="2-内存">2 内存</h3>
+<p>寄存器很小，而且不够用，于是我们都把数据放到内存中。</p>
+<p><strong>32位的寻址能力：</strong></p>
+<p>F 代表 1111，4bits</p>
+<p>8个F就是，32bits (位)</p>
+<p>内存地址：0x00000000 - 0xFFFFFFFF = 0x1 0000 0000 个内存地址</p>
+<p>每个内存地址可以容纳1个Byte  <code>0000 0000 </code> 的数据</p>
+<p>0x1 0000 0000 个Bytes，转换为10进制 = 4,294,967,296 Bytes(字节 B) 的数据量</p>
+<p>按照规则 /1024，B &ndash;&gt; KB &ndash;&gt; MB &ndash;&gt; GB 最终发现就是 4GB！</p>
+<p>这就解释了为什么32位的CPU最大只支持4GB内存！</p>
+<p>而64位的寻址能力： 0x00000000 00000000 - 0xFFFFFFFF FFFFFFFF 绰绰有余！</p>
+<p>所以每个内存地址都有一个编号，可以通过这些编号往里面存值。</p>
+<p><strong>内存如何存值？</strong></p>
+<p>数据宽度：</p>
 <ul>
-	
+<li>Byte(0xFF)    8 bits (位)</li>
+<li>Word(0xFFFF)    16 bits</li>
+<li>DWORD(0xFFFFFFFF)    32 bits</li>
+<li>QWORD(0xFFFFFFFF FFFFFFFF)    64 bits</li>
 </ul>
+<p>内存地址：0xFFFFFFFF</p>
+<p>不是任意的地址都可以写东西，只有程序申请过的内存地址才可以使用。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e"># 汇编如何向内存中写值</span>
+mov 数据宽度 ptr ds:<span style="color:#f92672">[</span>内存地址<span style="color:#f92672">]</span>, 值
 
+mov byte ptr ds:<span style="color:#f92672">[</span>0x0019FF70<span style="color:#f92672">]</span>, <span style="color:#ae81ff">1</span>
+mov dword ptr ds:<span style="color:#f92672">[</span>0x0019FF74<span style="color:#f92672">]</span>, <span style="color:#ae81ff">1</span>
 
-<footer class=" footline" >
+<span style="color:#75715e"># 注意传递的值的大小，一定要在数据宽度以内</span>
+
+<span style="color:#75715e"># 内存地址有多种写法</span>
+ds:<span style="color:#f92672">[</span>0x0019FF70+4<span style="color:#f92672">]</span> <span style="color:#75715e"># 内存地址偏移写法，其实就是 ds:[0x0019FF74]</span>
+ds:<span style="color:#f92672">[</span>eax<span style="color:#f92672">]</span> <span style="color:#75715e"># 寄存器写法，就是把寄存器里的值放到内存里面</span>
+ds:<span style="color:#f92672">[</span>eax+4<span style="color:#f92672">]</span> <span style="color:#75715e"># 寄存器偏移写法</span>
+
+<span style="color:#75715e"># 数组[]</span>
+ds:<span style="color:#f92672">[</span>reg+reg*<span style="color:#f92672">{</span>1,2,4,8<span style="color:#f92672">}]</span>
+ds:<span style="color:#f92672">[</span>reg+reg*<span style="color:#f92672">{</span>1,2,4,8<span style="color:#f92672">}</span>+4<span style="color:#f92672">]</span> <span style="color:#75715e"># 偏移</span>
+</code></pre></div>
+
+<footer class="footline">
 	
 </footer>
 
@@ -851,6 +903,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -863,6 +916,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -911,6 +967,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -935,8 +992,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/3-%E6%B1%87%E7%BC%96%E5%AD%A6%E4%B9%A0%E6%8C%87%E5%8D%97/" title="3 汇编学习指南"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/zh/b01-java%E5%85%A5%E9%97%A8/" title="B01 Java入门" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/1-%E6%B1%87%E7%BC%96%E5%85%A5%E9%97%A8/" title="1 汇编介绍" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -966,3 +1025,4 @@
 
   </body>
 </html>
+

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: Hugo 主题的 Learn 文档</title>
+    <title>6 面向对象 :: Hugo 主题的 Learn 文档</title>
 
     
     <link href="/css/nucleus.css?1596862178" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/zh/categories/">
+  <body class="" data-url="/zh/b01-java%E5%85%A5%E9%97%A8/6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -95,7 +95,7 @@
   
     
     <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/" title="B01 Java入门" class="dd-item 
-        
+        parent
         
         
         ">
@@ -228,7 +228,7 @@
  
   
     
-      <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="6 面向对象" class="dd-item ">
+      <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" title="6 面向对象" class="dd-item active">
         <a href="/zh/b01-java%E5%85%A5%E9%97%A8/6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
         6 面向对象
         <i class="fas fa-check read-icon"></i>
@@ -342,7 +342,7 @@
     
     <li data-nav-id="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" title="B03 汇编语言s" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">
@@ -497,41 +497,13 @@
               
               
                   
-                    
-                    
-                      <option id="en" value="https://deemopoi.github.io/en/categories/">English</option>
-                    
-                  
-              
-                  
-              
-                  
-              
-          
-              
               
                   
               
                   
                     
                     
-                      <option id="fr" value="https://deemopoi.github.io/fr/categories/">Français</option>
-                    
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="zh" value="https://deemopoi.github.io/zh/categories/" selected>简体中文</option>
+                      <option id="zh" value="https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/6-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" selected>简体中文</option>
                     
                   
               
@@ -573,6 +545,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/B01%20Java%e5%85%a5%e9%97%a8/6%20%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -593,7 +576,13 @@
             
           
           
-            <a href='/zh/'></a> > Categories
+            
+            
+          
+          
+            <a href='/zh/'></a> > <a href='/zh/b01-java%E5%85%A5%E9%97%A8/'>B01 Java入门</a> > 6 面向对象
+          
+        
           
         
           
@@ -604,7 +593,19 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-面向对象概念">1 面向对象概念</a></li>
+        <li><a href="#2-类-和-对象">2 类 和 对象</a></li>
+        <li><a href="#3-构造器">3 构造器</a></li>
+        <li><a href="#4-内存分析">4 内存分析</a></li>
+        <li><a href="#5-参数传递vs引用传递">5 参数传递vs引用传递</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -620,24 +621,149 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Categories
+              6 面向对象
             </h1>
           
 
         
 
 
-
-
-
+<h3 id="1-面向对象概念">1 面向对象概念</h3>
+<p>**面向对象编程的本质：**以类的方式组织代码，以对象的组织（封装）数据</p>
+<p><strong>三大特性：</strong></p>
 <ul>
-	
+<li>
+<p>封装</p>
+</li>
+<li>
+<p>继承</p>
+</li>
+<li>
+<p>多态</p>
+</li>
 </ul>
+<blockquote>
+<p>从认知的角度考虑，是先有对象后有类。对象，是具体的事物；类，是抽象的，是对象的抽象。</p>
+</blockquote>
+<blockquote>
+<p>从代码的角度考虑，是先有类后有对象。类是对象的模板，对象是类的实例。</p>
+</blockquote>
+<h3 id="2-类-和-对象">2 类 和 对象</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">//  Student类
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Student</span> <span style="color:#f92672">{</span>
+    
+    <span style="color:#75715e">// 属性：字段（这里不赋值，实例化以后才赋值）
+</span><span style="color:#75715e"></span>    String name<span style="color:#f92672">;</span> <span style="color:#75715e">// null
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span> <span style="color:#75715e">// 0
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// 方法
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">study</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// this. 指的是本class内部的
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">+</span> <span style="color:#e6db74">&#34; is learning.&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 主类
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Application</span> <span style="color:#f92672">{</span>
+    
+    <span style="color:#75715e">// 主类才有main方法
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 把Student这个 类 实例化为 对象
+</span><span style="color:#75715e"></span>        Student tom <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student<span style="color:#f92672">();</span>
+        Student mary <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Student<span style="color:#f92672">();</span>
+        
+        <span style="color:#75715e">// 把tom内的属性进行赋值
+</span><span style="color:#75715e"></span>        tom<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tom&#34;</span><span style="color:#f92672">;</span>
+        tom<span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> 7<span style="color:#f92672">;</span>
+        
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>tom<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span> <span style="color:#75715e">// Tom
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>tom<span style="color:#f92672">.</span><span style="color:#a6e22e">age</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 7
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>mary<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span> <span style="color:#75715e">// null
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>mary<span style="color:#f92672">.</span><span style="color:#a6e22e">age</span><span style="color:#f92672">);</span> <span style="color:#75715e">// 0
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="3-构造器">3 构造器</h3>
+<p><strong>构造器 constructor：</strong></p>
+<ol>
+<li>和类名同名</li>
+<li>没有返回值</li>
+</ol>
+<p><strong>作用：</strong></p>
+<ol>
+<li>new 本质是在调用构造器</li>
+<li>初始化 对象的值</li>
+</ol>
+<p><strong>IDEA 快捷键：</strong> Alt + insert</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">{</span>
+    String name<span style="color:#f92672">;</span>
+    <span style="color:#66d9ef">int</span> age<span style="color:#f92672">;</span>
+    
+    <span style="color:#75715e">// ########隐式的定义构造器########
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// 一个类即使什么都不写，也会存在一个方法,与类名 Person 同名
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// public Person() {
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// }
+</span><span style="color:#75715e"></span>    
+    
+    <span style="color:#75715e">// ########显式的定义构造器########
+</span><span style="color:#75715e"></span>    
+    <span style="color:#75715e">// 无参构造器，new(实例化)一个对象的时候，不用传递参数
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Person</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span><span style="color:#960050;background-color:#1e0010">、</span>
+        <span style="color:#75715e">// 里面也可以什么都不写
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tom&#34;</span><span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> 7<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#75715e">// 有参构造器，要传递参数
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// 一旦定义了有参构造器，无参构造器就必须 显式定义
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">Person</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">,</span> <span style="color:#66d9ef">int</span> age<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> name<span style="color:#f92672">;</span>
+        <span style="color:#66d9ef">this</span><span style="color:#f92672">.</span><span style="color:#a6e22e">age</span> <span style="color:#f92672">=</span> age<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="4-内存分析">4 内存分析</h3>
+<p><img src="https://cdn.jsdelivr.net/gh/DeemoPoi/image/img/200805_6%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E5%86%85%E5%AD%98%E5%88%86%E6%9E%90.png" alt="内存分析图"></p>
+<h3 id="5-参数传递vs引用传递">5 参数传递vs引用传递</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 参数传递
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Demo</span> <span style="color:#f92672">{</span>
+    
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">changeNum</span><span style="color:#f92672">(</span><span style="color:#66d9ef">int</span> a<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        a <span style="color:#f92672">=</span> 10<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+   
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#66d9ef">int</span> a <span style="color:#f92672">=</span> 1<span style="color:#f92672">;</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span> <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>        
+        <span style="color:#75715e">// 只传参（只复制a的值），a本身不变
+</span><span style="color:#75715e"></span>        Demo<span style="color:#f92672">.</span><span style="color:#a6e22e">changeNum</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span> <span style="color:#75715e">// Demo. 可以省略
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>a<span style="color:#f92672">);</span> <span style="color:#75715e">// 1
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 引用传递
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Demo</span> <span style="color:#f92672">{</span>
+    
+    <span style="color:#75715e">// class内部的class
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">private</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Person</span> <span style="color:#f92672">{</span>
+        String name<span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">changeName</span><span style="color:#f92672">(</span>Person p<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        p<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Tom&#34;</span><span style="color:#f92672">;</span>
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">main</span><span style="color:#f92672">(</span>String<span style="color:#f92672">[]</span> args<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        <span style="color:#75715e">// 实例化class
+</span><span style="color:#75715e"></span>        Person p <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Person<span style="color:#f92672">();</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>p<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span> <span style="color:#75715e">// null
+</span><span style="color:#75715e"></span>        
+        <span style="color:#75715e">// 传递 p 这个实例化了的对象（复制了地址），所以会改变内部name
+</span><span style="color:#75715e"></span>        Demo<span style="color:#f92672">.</span><span style="color:#a6e22e">changeName</span><span style="color:#f92672">(</span>p<span style="color:#f92672">);</span> <span style="color:#75715e">// Demo. 可以省略
+</span><span style="color:#75715e"></span>        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span>p<span style="color:#f92672">.</span><span style="color:#a6e22e">name</span><span style="color:#f92672">);</span> <span style="color:#75715e">// Tom
+</span><span style="color:#75715e"></span>    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div>
 
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -672,8 +798,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -687,6 +811,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -768,6 +895,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -783,6 +911,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -935,8 +1066,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/zh/b01-java%E5%85%A5%E9%97%A8/5-%E6%96%B9%E6%B3%95%E5%92%8C%E6%95%B0%E7%BB%84/" title="5 方法和数组"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/zh/b01-java%E5%85%A5%E9%97%A8/" title="B01 Java入门" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/zh/b01-java%E5%85%A5%E9%97%A8/7-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_%E5%B0%81%E8%A3%85-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81/" title="7 面向对象_封装 继承 多态" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -966,3 +1099,4 @@
 
   </body>
 </html>
+

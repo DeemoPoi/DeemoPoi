@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Categories :: Hugo 主题的 Learn 文档</title>
+    <title>8 面向对象_abstract interface :: Hugo 主题的 Learn 文档</title>
 
     
     <link href="/css/nucleus.css?1596862178" rel="stylesheet">
@@ -34,7 +34,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/zh/categories/">
+  <body class="" data-url="/zh/b01-java%E5%85%A5%E9%97%A8/8-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_abstract-interface/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -95,7 +95,7 @@
   
     
     <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/" title="B01 Java入门" class="dd-item 
-        
+        parent
         
         
         ">
@@ -270,7 +270,7 @@
  
   
     
-      <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/8-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_abstract-interface/" title="8 面向对象_abstract interface" class="dd-item ">
+      <li data-nav-id="/zh/b01-java%E5%85%A5%E9%97%A8/8-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_abstract-interface/" title="8 面向对象_abstract interface" class="dd-item active">
         <a href="/zh/b01-java%E5%85%A5%E9%97%A8/8-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_abstract-interface/">
         8 面向对象_abstract interface
         <i class="fas fa-check read-icon"></i>
@@ -342,7 +342,7 @@
     
     <li data-nav-id="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" title="B03 汇编语言s" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/zh/b03-%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">
@@ -497,41 +497,13 @@
               
               
                   
-                    
-                    
-                      <option id="en" value="https://deemopoi.github.io/en/categories/">English</option>
-                    
-                  
-              
-                  
-              
-                  
-              
-          
-              
               
                   
               
                   
                     
                     
-                      <option id="fr" value="https://deemopoi.github.io/fr/categories/">Français</option>
-                    
-                  
-              
-                  
-              
-          
-              
-              
-                  
-              
-                  
-              
-                  
-                    
-                    
-                      <option id="zh" value="https://deemopoi.github.io/zh/categories/" selected>简体中文</option>
+                      <option id="zh" value="https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/8-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_abstract-interface/" selected>简体中文</option>
                     
                   
               
@@ -573,6 +545,17 @@
               <div>
                 <div id="top-bar">
                 
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/B01%20Java%e5%85%a5%e9%97%a8/8%20%e9%9d%a2%e5%90%91%e5%af%b9%e8%b1%a1_abstract%20interface.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text"></span>
+                    </a>
+                  </div>
+                  
+                
                 
                 <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
                     <span id="sidebar-toggle-span">
@@ -593,7 +576,13 @@
             
           
           
-            <a href='/zh/'></a> > Categories
+            
+            
+          
+          
+            <a href='/zh/'></a> > <a href='/zh/b01-java%E5%85%A5%E9%97%A8/'>B01 Java入门</a> > 8 面向对象_abstract interface
+          
+        
           
         
           
@@ -604,7 +593,16 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-抽象类-abstract">1 抽象类 abstract</a></li>
+        <li><a href="#2-接口-interface--implements">2 接口 interface / implements</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
     </div>
 </div>
 
@@ -620,24 +618,114 @@
           
             <h1>
               
-                taxonomy ::
-              
-              Categories
+              8 面向对象_abstract interface
             </h1>
           
 
         
 
 
-
-
-
+<h3 id="1-抽象类-abstract">1 抽象类 abstract</h3>
+<blockquote>
+<p>抽象的抽象：约束</p>
+</blockquote>
+<ol>
+<li>
+<p>不能 new 这个抽象类，只能靠子类去实现它：约束</p>
+</li>
+<li>
+<p>抽象类中可以写普通方法</p>
+</li>
+<li>
+<p>抽象方法必须在抽象类中</p>
+</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// abstract 抽象类，本质是类，extends 只能单继承，不能多继承（而接口可以）
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> calss Action <span style="color:#f92672">{</span>
+    
+    <span style="color:#75715e">// 约束，有人帮我们实现
+</span><span style="color:#75715e"></span>    <span style="color:#75715e">// abstract 抽象方法，只有方法名字，没有方法的实现
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doSomething</span><span style="color:#f92672">();</span>
+    
+    
+    <span style="color:#75715e">// 抽象类里面的普通方法
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">run</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        System<span style="color:#f92672">.</span><span style="color:#a6e22e">out</span><span style="color:#f92672">.</span><span style="color:#a6e22e">println</span><span style="color:#f92672">(</span><span style="color:#e6db74">&#34;run&#34;</span><span style="color:#f92672">);</span>
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 抽象类中的所有抽象方法，必须要继承了它的子类去重写，来实现这些方法；
+</span><span style="color:#75715e">// 除非继承它的子类 A 也是个抽象类，那么就需要子类 A 的子类去实现了
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">A</span> <span style="color:#66d9ef">extends</span> Action <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">doSomething</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        
+    <span style="color:#f92672">}</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><h3 id="2-接口-interface--implements">2 接口 interface / implements</h3>
+<blockquote>
+<p>抽象类是抽象的抽象，是约束，抽象类有具体的实现（普通方法）和规范（抽象方法）；</p>
+</blockquote>
+<blockquote>
+<p>接口只有规范，自己无法写方法，接口是专业的约束。</p>
+<p>接口的本质是契约，定义了一组规则，制定好后大家都遵守。</p>
+</blockquote>
 <ul>
-	
+<li>
+<p>架构师其实就是拥有这种抽象的思维，能够把一个系统写成接口，然后让码农去实现这些方法。</p>
+</li>
+<li>
+<p>接口不能被实例化，接口中没有构造方法。</p>
+</li>
 </ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// interface 定义的关键字， 接口都需要有实现类
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">UserService</span> <span style="color:#f92672">{</span>
+    
+    <span style="color:#75715e">// 接口中定义的属性，都是常量，默认有 public static final，可省略
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">int</span> AGE <span style="color:#f92672">=</span> 99<span style="color:#f92672">;</span>
+    
+	<span style="color:#75715e">// 接口中的所有定义的方法，其实都是抽象的，默认有public avstract，可省略
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">undate</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">);</span>
+    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">query</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">);</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">interface</span> <span style="color:#a6e22e">TimeService</span> <span style="color:#f92672">{</span>
+    <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">timer</span><span style="color:#f92672">();</span>
+<span style="color:#f92672">}</span>
+</code></pre></div><div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-java" data-lang="java"><span style="color:#75715e">// 抽象类，extends 只能单继承；而接口可以多继承
+</span><span style="color:#75715e">// 实现了接口的类，就需要重写接口中的方法
+</span><span style="color:#75715e">// 类 + 可以实现接口 + implements + 接口1,接口2
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">UserServiceImpl</span> <span style="color:#66d9ef">implements</span> UverService<span style="color:#f92672">,</span>TimeService <span style="color:#f92672">{</span>
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">add</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">delete</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">update</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">query</span><span style="color:#f92672">(</span>String name<span style="color:#f92672">)</span> <span style="color:#f92672">{</span>
+        
+    <span style="color:#f92672">}</span>
+    
+    <span style="color:#a6e22e">@Override</span>
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">timer</span><span style="color:#f92672">()</span> <span style="color:#f92672">{</span>
+        
+    <span style="color:#f92672">}</span>
+    
+    
+<span style="color:#f92672">}</span>
+</code></pre></div>
 
-
-<footer class=" footline" >
+<footer class="footline">
 	
 </footer>
 
@@ -672,8 +760,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -687,6 +773,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -800,6 +889,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -815,6 +905,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -935,8 +1028,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/zh/b01-java%E5%85%A5%E9%97%A8/7-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_%E5%B0%81%E8%A3%85-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81/" title="7 面向对象_封装 继承 多态"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/zh/b01-java%E5%85%A5%E9%97%A8/" title="B01 Java入门" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/zh/b01-java%E5%85%A5%E9%97%A8/9-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_static-%E5%86%85%E9%83%A8%E7%B1%BB-%E8%8A%B1%E5%BC%8F%E5%86%99%E6%B3%95/" title="9 面向对象_static 内部类 花式写法" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
@@ -966,3 +1061,4 @@
 
   </body>
 </html>
+
