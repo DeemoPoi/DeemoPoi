@@ -115,7 +115,7 @@ IDEA快捷键: Alt + insert
       <pubDate>Thu, 06 Aug 2020 00:00:00 +0000</pubDate>
       
       <guid>https://deemopoi.github.io/zh/b01-java%E5%85%A5%E9%97%A8/9-%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1_static-%E5%86%85%E9%83%A8%E7%B1%BB-%E8%8A%B1%E5%BC%8F%E5%86%99%E6%B3%95/</guid>
-      <description>1 static 1.1 静态属性和静态方法 public class Student { private static int age; // 静态变量  private double score; // 非静态变量  public static void go() { } public void run() { } public static void main(String[] args) { Student s1 = new Student(); System.out.println(Student.age); // System.out.println(Student.score); 非静态，不能直接调用  System.out.println(s1.age); System.out.println(s1.score); Student.go(); // 或者 go();  s1.run(); } } 1.2 静态代码块 public class Person { // 2 也可以用来赋初始值  { System.out.println(&amp;#34;匿名代码块&amp;#34;)； } // 1 只执行一次  static { System.</description>
+      <description>1 static 1.1 静态属性和静态方法 public class Student { private static int age; // 静态变量  private double score; // 非静态变量  public static void go() { } public void run() { } public static void main(String[] args) { Student s1 = new Student(); System.out.println(Student.age); // System.out.println(Student.score); 非静态，不能直接调用  System.out.println(s1.age); System.out.println(s1.score); Student.go(); // 或者 go();  s1.run(); } } 1.2 静态代码块 public class Person { // 2 也可以用来赋初始值  { System.out.println(&amp;#34;匿名代码块&amp;#34;); } // 1 只执行一次  static { System.</description>
     </item>
     
     <item>
